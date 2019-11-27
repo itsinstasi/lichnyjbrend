@@ -306,8 +306,8 @@ $(document).ready(function(){
 		type: request_method,
                 contentType: 'application/json',
 		data : form_data
-	}).done(function(response){ //
-	        form.replaceWith("<p>Спасибо!<br/>Ваш сайт будет готов очень скоро, но мы должны быть уверены в том, что вы владелец аккаунта.<br/>Перед публикацией мы свяжемся с вами в Instagram Direct.<br/>Чтобы не пропустить уведомление, подпишитесь на наш аккаунт: <a href='https://instagram.com/lichnyjbrend' target='_blank'>@lichnyjbrend</a></p>");
+	}).done(function(response){
+		window.location.href = "http://lichnyj-brend.ru/thanks";
 	});
 
       return false;
