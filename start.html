@@ -92,6 +92,7 @@
                 <span class="col-lg-7 col-md-6 col-sm-8 col-12"><input class="form-control" name="userName" placeholder="Введите Instagram"></span>
                 <span class="col-lg-4 col-md-6 col-sm-4 col-12"><input class="btn btn-success" type="submit" value="Оценить"></span>
               </form>
+              <p id="error" style="color:red;"></p>
               <h6>Попробуй бесплатно&nbsp;&bullet; Дальше&nbsp;действовать&nbsp;будет&nbsp;бренд<h6>
             </div>
             <div class="col-lg-6 col-md-6"><img src="img/phones.png" /></div>
@@ -288,7 +289,7 @@ function getFormData($form){
 }
 
 $(document).ready(function(){
-   $("#ref").val(getUrlParameter('ref'));
+    $("#ref").val(getUrlParameter('ref'));
 
     $('.btn-primary').click(function(){
     	$('html, body').animate({ scrollTop: 0}, 250); 
@@ -296,6 +297,10 @@ $(document).ready(function(){
 
    $('form').submit(function(){
 	event.preventDefault(); //prevent default action 
+
+	var username = $(this).find('input[name="userName"]').val();
+	if (!username) return false;
+
 	var post_url = $(this).attr("action"); //get form action url
 	var request_method = $(this).attr("method"); //get form GET/POST method
 	var form_data = JSON.stringify(getFormData($(this)));
@@ -308,9 +313,11 @@ $(document).ready(function(){
 		data : form_data
 	}).done(function(response){
 		window.location.href = "http://lichnyj-brend.ru/thanks";
+	}).fail(function(){
+		$('#error').text("Мы не нашли указанный Instagram");
 	});
 
-      return false;
+        return false;
    });
 });
     </script>
