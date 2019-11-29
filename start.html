@@ -359,7 +359,11 @@ $(document).ready(function(){
                 contentType: 'application/json',
 		data : form_data
 	}).done(function(response){
-		window.location.href = "http://lichnyj-brend.ru/thanks";
+		var redirect = "http://lichnyj-brend.ru/thanks";
+                if (ref) {
+			redirect = redirect + "?ref=" + ref;
+                }
+                window.location.href = redirect;
 	}).fail(function(){
 		$('#error').text("Мы не нашли указанный Instagram");
 	});

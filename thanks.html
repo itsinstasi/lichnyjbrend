@@ -87,7 +87,7 @@
               <h5>Ваш сайт личного бренда будет готов очень скоро.</h5>
               <p>Мы отправим вам в Instagram Direct ссылку для подключения. Пожалуйста, <b>подпишитесь</b> на наш Instagram, чтобы сообщение <b>не затерялось</b>, и вы бы увидели его <b>вовремя</b>.</p>
 			  <br><br><br>
-              <p class="buttond"  style="text-align:center;"><a href="https://www.instagram.com/lichnyjbrend/" target="_blank" style="cursor: pointer; font-size:17px;  text-decoration: none; padding:13px 20px; color:#ffffff; background-color:#46c732; border-radius:8px; border: 3px solid #;">ПОДПИСАТЬСЯ ДЛЯ ПОДКЛЮЧЕНИЯ</a></p>
+              <p class="buttond" style="text-align:center;"><a id="subscribe" href="https://www.instagram.com/lichnyjbrend/" target="_blank" style="cursor: pointer; font-size:17px;  text-decoration: none; padding:13px 20px; color:#ffffff; background-color:#46c732; border-radius:8px; border: 3px solid #;">ПОДПИСАТЬСЯ</a></p>
 
             </div>
             <div class="col-lg-6 col-md-6"><img src="img/flyer.png" /></div>
@@ -97,7 +97,8 @@
       </div>
 
 	 
-    <script type="text/javascript" src="/static/js/bundle.js"></script>
+	<!--jQuery-->
+	<script src="js/vendors/jquery.min.js"></script>
     <script type="text/javascript" src="js/main.ac0c1bd6.js"></script>
 
 <!-- Yandex.Metrika counter -->
@@ -115,6 +116,35 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/56430199" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+
+    <script type="text/javascript">
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+
+$(document).ready(function(){
+    var ref = getUrlParameter('ref');
+
+    if (ref) {
+        $.get("https://admapi.itsinsta.site/api/profiles/" + ref, 
+            function(data) {
+                $('#subscribe').attr("href", data.siteUrl);
+            });
+    }
+});
+
+    </script>
 
     </div>
 </body>
