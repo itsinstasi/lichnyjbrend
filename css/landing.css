@@ -7351,7 +7351,65 @@ div.form-control {
     font-size: 1.0125rem; }
   .maintest .short-description .mytest1 {
     margin-bottom: 1em; } }
+	
+.referalpage{
+	position: fixed;
+	z-index: 110;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #ffffff;
+    border-bottom: 1px solid var(--header1-brd);
+	padding: 5px 0;
+}
+.referalpage__logo,
+.referalpage__left,
+.referalpage__wrap{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: space-between;
+}
+.referalpage__logo-pic{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: 10px;
+}
+.referalpage__logo-txt{
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 400;
+	color: var(--unactive-txt-color);
+}
+.referalpage__title{
+	margin-left: 15px;
+	font-size: 14px;
+	color: var(--main-txt-color);
+}
 
+
+@media only screen and (max-width : 767px){
+	.referalpage__left{display: block;}
+	.referalpage__logo{justify-content: flex-start;}
+	.referalpage__logo-pic{
+		width: 36px;
+		height: 36px;
+		margin-right: 10px;
+	}
+	.referalpage__title{display: none;}
+}
+
+.containerreferalpage{
+    margin: 0 auto;
+    padding: 0 20px;
+	width: 100%;
+    max-width: 975px;
 /*
 h1 {@include media-breakpoint-down(md) {font-size: $h1-font-size * 0.7;}}
 h2 {@include media-breakpoint-down(md) {font-size: $h2-font-size * 0.7;}}

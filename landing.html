@@ -65,33 +65,32 @@
 	<body class="landing">
 
     <div id="root">
-
-      <div class="header-wrapper instagram">
-      <header class="header-landing"><div class="container">
-
-		<div style="display: none" class="referalpage">
+     <div class="header-wrapper instagram">
+      <header class="header-landing">
+	    
+		<div class="referalpage">
 			<div class="containerreferalpage">
 				<div class="referalpage__wrap">
 					<div class="referalpage__left">
-						<a id="refLink" href="/" target="_blank" class="referalpage__logo">
-							<div class="referalpage__logo-pic"><img id="refLogo" src="" alt="" style="max-width: 100%"></div>
-							<div id="refUserName" class="referalpage__logo-txt">&nbsp;</div>
+						<a href="/" class="referalpage__logo">
+							<div class="referalpage__logo-pic"><img src="img/logo.jpg" alt="Comodini | Мебель на заказ в Саранске"></div>
+							<div class="referalpage__logo-txt">Comodini__ru</div>
 						</a>
-						<div id="refTitle" class="referalpage__title">&nbsp;</div>
+						<div class="referalpage__title">Мебель на заказ в Саранске</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
-	  <div class="container">
+	    </div>
+		
+	   <div class="container">
           <div class="itsinstasite-wrapper"><a href="/" class="itsinstasite-logo white animated">ЛИЧНЫЙ БРЕНД</a></div>
           <nav class="navbar navbar-expand-sm navbar-dark justify-content-end p-0">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-nav"><span class="navbar-toggler-icon"></span></button>
               <div class="collapse navbar-collapse justify-content-end" id="header-nav">
                 <div class="navbar-nav">
-                  <a class="nav-item nav-link blog" href="/" target="_blank">Блог</a>
+                  <a class="nav-item nav-link" href="/terms">Блог</a>
 				  <a class="nav-item nav-link" data-toggle="modal" data-target="#pricing">Тарифы</a>
-                  <!--<a class="nav-item nav-link" href="/">Войти</a>-->
+                  <a class="nav-item nav-link" href="/">Войти</a>
                 </div>
               </div>
           </nav>
@@ -102,14 +101,13 @@
             <div class="col-lg-6 col-md-6">
               <h1>Сделай себе имя</h1>
               <h5>Обрети славу и популярность в интернет пространстве, благодаря своему личному бренду</h5>
-              <p>Представляем новую онлайн платформу для продвижения блогеров, частных специалистов и предпринимателей в Google и Яндекс, благодаря вашему контенту в Инстаграм.</p>
-              <form class="form-row" action="https://admapi.itsinsta.site/api/profiles" method="post">
-                <input id="ref" type="hidden" name="ref" value="" />
-                <span class="col-lg-7 col-md-6 col-sm-8 col-12"><input class="form-control" name="userName" placeholder="Введите Instagram"></span>
-                <span class="col-lg-4 col-md-6 col-sm-4 col-12"><input class="btn btn-success" type="submit" value="Попробовать"></span>
+              <p>Представляем новую онлайн платформу для продвижения блогеров, частных специалистов и предпрнмателей в Google и Яндекс, благодаря вашему контенту в Инстаграм</p>
+              <form class="form-row" action="https://dash.itsinstasite.com/signup/">
+                <input type="hidden" name="ref" value="bio" />
+                <span class="col-lg-7 col-md-6 col-sm-8 col-12"><input class="form-control" name="email" type="email" placeholder="Введите Instagram"></span>
+                <span class="col-lg-4 col-md-6 col-sm-4 col-12"><input class="btn btn-success" type="submit" value="Оцените"></span>
               </form>
-              <p id="error" style="color:red;"></p>
-              <h6>Попробуй бесплатно&nbsp;&bullet; Дальше&nbsp;действовать&nbsp;будет&nbsp;бренд</h6>
+              <h6>Попробуй бесплатно&nbsp;&bullet; Дальше&nbsp;действовать&nbsp;будет&nbsp;бренд<h6>
             </div>
             <div class="col-lg-6 col-md-6"><img src="img/phones.png" /></div>
           </div>
@@ -135,13 +133,13 @@
       </div></section>
 
       <section><div class="text-center">
-        <button class="btn btn-primary btn-lg mb-4">Попробовать</button>
+        <form action="https://dash.itsinstasite.com/signup/"><input type="hidden" name="ref" value="bio" /><button type="submit" class="btn btn-primary btn-lg mb-4">Попробовать</button></form>
         <p class="text-secondary">Попробуй бесплатно&nbsp;&nbsp;&bullet; Кредитная&nbsp;карта&nbsp;не&nbsp;нужна<p>
       </div></section>
 
       <section class="screens">
         <h2 class="display-4 text-center mb-5">Тебе понравится</h2>
-        <h4 class="text-secondary mx-auto mb-5">Личный бренд платформа - это инструмент для автоматического продвижения личного бренда, благодаря контенту из вашего Instagram. А ещё вы получаете страницу для ссылки Instagram в разделе профиля: красиво, удобно и БЕСПЛАТНО!</h4><!--
+        <h4 class="text-secondary mx-auto mb-5">Личный бренд платформа - это инструмент для автоматического продвижения личного бренда, благодаря контенту из вашего Инстаграм.</h4><!--
         --><div class="mb-3"><img src="img/podcast.jpg" /><p>Блогерам</p></div><!--
         --><div class="mb-3"><img src="img/youtube.jpg" /><p>Преподавателям</p></div><!--
         --><div class="mb-3"><img src="img/app.jpg" /><p>Мастерам</p></div><!--
@@ -152,7 +150,7 @@
    --></section>
 
       <section><div class="text-center">
-        <button type="submit" class="btn btn-primary btn-lg mb-4">Попробовать</button>
+        <form action="https://dash.itsinstasite.com/signup/"><input type="hidden" name="ref" value="bio" /><button type="submit" class="btn btn-primary btn-lg mb-4">Попробовать</button></form>
         <p class="text-secondary">Попробуй бесплатно&nbsp;&nbsp;&bullet; Кредитная&nbsp;карта&nbsp;не&nbsp;нужна<p>
       </div></section>
 
@@ -169,7 +167,7 @@
       </div></section>
 
       <section><div class="text-center">
-        <button type="submit" class="btn btn-primary btn-lg mb-4">Попробовать</button>
+        <form action="https://dash.itsinstasite.com/signup/"><input type="hidden" name="ref" value="bio" /><button type="submit" class="btn btn-primary btn-lg mb-4">Попробовать</button></form>
         <p class="text-secondary">Попробуй бесплатно&nbsp;&nbsp;&bullet; Кредитная&nbsp;карта&nbsp;не&nbsp;нужна<p>
       </div></section>
 	<div id="pricing" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog">
@@ -269,105 +267,13 @@
       <footer><div class="container d-flex flex-column flex-sm-row align-items-center justify-content-between">
         <div><span class="itsinstasite-logo animated black">ЛИЧНЫЙ БРЕНД<span></div>
         <nav class="d-flex flex-column  flex-sm-row text-center text-sm-left">
-          <a class="blog" href="/" target="_blank">Блог</a>
+          <a href="/" target="_blank">Блог</a>
 		  <a data-toggle="modal" data-target="#pricing">Тарифы</a>
-          <!--<a href="/">Политика</a>-->		  
+          <a href="/">Политика</a>		  
         </nav>
       </div></footer>
-	<!--jQuery-->
-	<script src="js/vendors/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/bundle.js"></script>
     <script type="text/javascript" src="js/main.ac0c1bd6.js"></script>
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(56430199, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/56430199" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-    <script type="text/javascript">
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = window.location.search.substring(1),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-        }
-    }
-};
-
-function getFormData($form){
-    var unindexed_array = $form.serializeArray();
-    var indexed_array = {};
-
-    $.map(unindexed_array, function(n, i){
-        indexed_array[n['name']] = n['value'];
-    });
-
-    return indexed_array;
-}
-
-$(document).ready(function(){
-    var ref = getUrlParameter('ref');
-    $("#ref").val(ref);
-
-    $('.btn-primary').click(function(){
-    	$('html, body').animate({ scrollTop: 0}, 250); 
-    });
-
-    if (ref) {
-        $.get("https://admapi.itsinsta.site/api/profiles/" + ref, 
-            function(data) { 
-                $('#refLink').attr("href", data.siteUrl);
-                $('#refLogo').attr("src", data.logoUrl);
-                $('#refUserName').html(data.userName);
-
-                $('.blog').attr("href", data.siteUrl);
-
-                $('.referalpage').show();
-            });
-    }
-
-    $('form').submit(function(){
-	event.preventDefault(); //prevent default action 
-
-	var username = $(this).find('input[name="userName"]').val();
-	if (!username) return false;
-
-	var post_url = $(this).attr("action"); //get form action url
-	var request_method = $(this).attr("method"); //get form GET/POST method
-	var form_data = JSON.stringify(getFormData($(this)));
-
-	var form = $(this);
-	$.ajax({
-		url : post_url,
-		type: request_method,
-                contentType: 'application/json',
-		data : form_data
-	}).done(function(response){
-		window.location.href = "http://lichnyj-brend.ru/thanks";
-	}).fail(function(){
-		$('#error').text("Мы не нашли указанный Instagram");
-	});
-
-        return false;
-    });
-});
-    </script>
     </div>
 </body>
 </html>
