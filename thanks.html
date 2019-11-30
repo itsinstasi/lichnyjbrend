@@ -136,7 +136,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 $(document).ready(function(){
     var ref = getUrlParameter('ref');
 
-    if (ref) {
+    if (false) {
         $.get("https://admapi.itsinsta.site/api/profiles/" + ref, 
             function(data) {
                 $('#subscribe').attr("href", data.siteUrl);
