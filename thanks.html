@@ -89,7 +89,7 @@
 			  <br>
 	      <span class="col-lg-8 col-md-6 col-sm-8 col-12"><iframe width="90%" height="450" src="https://www.youtube.com/embed/VRRcOiDpq8g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe></span>
 			  <br><br>
-              <center><span class="col-lg-8 col-md-6 col-sm-8 col-12"><input id='site' disabled class="btn btn-success" value="ВАШ НОВЫЙ САЙТ"></span></center>
+              <center><span class="col-lg-8 col-md-6 col-sm-8 col-12"><a id='site' style="background-color: lightgrey; pointer-events: none; cursor: default;" class="btn btn-success" target="_blank">ВАШ НОВЫЙ САЙТ</a></span></center>
               <br><br>
             </div>
             <div class="col-lg-6 col-md-6"><img src="img/flyer.png" /></div>
@@ -133,7 +133,7 @@ $(document).ready(function(){
                     clearInterval(tid);
 
                     $('#site').attr("href", siteUrl);
-                    $('#site').removeAttr("disabled");
+                    $('#site').removeAttr("style");
                 }
             });
         }, 10000);
