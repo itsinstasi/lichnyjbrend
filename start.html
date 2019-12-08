@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="Ru-ru">
 <head>
@@ -103,13 +104,13 @@
               <h1>СОЗДАЙ СЕБЕ ЛИЧНЫЙ БРЕНД</h1>
               <h5>Обрети славу и популярность в интернет пространстве, благодаря своему личному бренду</h5>
               <p>Представляем новую онлайн платформу для продвижения блогеров, частных специалистов и предпринимателей в Google и Яндекс, благодаря вашему контенту в Инстаграм.</p>
-              <form class="form-row" action="https://admapi.itsinsta.site/api/profiles" method="post">
-                <input id="ref" type="hidden" name="ref" value="" />
-                <span class="col-lg-7 col-md-6 col-sm-8 col-12"><input class="form-control" name="userName" placeholder="Введите Instagram"></span>
-                <span class="col-lg-4 col-md-6 col-sm-4 col-12"><input class="btn btn-success" type="submit" value="Попробовать"></span>
-              </form>
-              <p id="error" style="color:red;"></p>
-              <h6>Попробуй бесплатно&nbsp;&bullet; Дальше&nbsp;действовать&nbsp;будет&nbsp;бренд</h6>
+              <br><br>
+			  <section>
+					<div class="text-center">
+						<a href="#themes" class="btn btn-primary btn-lg mb-4">Попробовать</a>
+						<p>Попробуй беспатно&nbsp;&bullet; Дальше&nbsp;действовать&nbsp;будет&nbsp;бренд</p>
+					</div>
+				</section>
             </div>
             <div class="col-lg-6 col-md-6"><img src="img/phones.png" /></div>
           </div>
@@ -135,24 +136,24 @@
       </div></section>
 
       <section><div class="text-center">
-        <button class="btn btn-primary btn-lg mb-4">Попробовать</button>
+        <a href="#themes" class="btn btn-primary btn-lg mb-4">Попробовать</a>
         <p class="text-secondary">Попробуй бесплатно&nbsp;&nbsp;&bullet; Кредитная&nbsp;карта&nbsp;не&nbsp;нужна<p>
       </div></section>
 
-      <section class="screens">
-        <h2 class="display-4 text-center mb-5">Тебе понравится</h2>
+      <section id='themes' class="screens">
+        <h2 class="display-4 text-center mb-5">Тебе понравится, выбери любую тему</h2>
         <h4 class="text-secondary mx-auto mb-5">Личный бренд платформа - это инструмент для автоматического продвижения личного бренда, благодаря контенту из вашего Instagram. А ещё вы получаете страницу для ссылки Instagram в разделе профиля: красиво, удобно и БЕСПЛАТНО!</h4><!--
-        --><div class="mb-3"><img src="img/podcast.jpg" /><p>Блогерам</p></div><!--
-        --><div class="mb-3"><img src="img/youtube.jpg" /><p>Преподавателям</p></div><!--
-        --><div class="mb-3"><img src="img/app.jpg" /><p>Мастерам</p></div><!--
-        --><div class="mb-3"><img src="img/media.jpg" style="margin-bottom: -2em;" /><p>SMM</p></div><!--
-        --><div class="mb-3"><img src="img/blog.jpg" /><p>Психологам</p></div><!--
-        --><div class="mb-3"><img src="img/shop.jpg" /><p>ЗОЖ</p></div><!--
-        --><div class="mb-3"><img src="img/you.jpg" /><p>Beauty</p></div><!--
+        --><div class="mb-3"><a class="theme" href="https://lichnyj-brend.ru/settings?theme=pink"><img src="img/themes/pink.png" /><p>Выбери: тема 1</p></a></div><!--
+        --><div class="mb-3"><a class="theme" href="https://lichnyj-brend.ru/settings?theme=marine"><img src="img/themes/marine.png" /><p>Выбери: тема 2</p></a></div><!--
+        --><div class="mb-3"><a class="theme" href="https://lichnyj-brend.ru/settings?theme=gold"><img src="img/themes/gold.png" /><p>Выбери: тема 3</p></a></div><!--
+        --><div class="mb-3"><a class="theme" href="https://lichnyj-brend.ru/settings?theme=violet"><img src="img/themes/violet.png" style="margin-bottom: -0em;" /><p>Выбери: тема 4</p></a></div><!--
+        --><div class="mb-3"><a class="theme" href="https://lichnyj-brend.ru/settings?theme=orange"><img src="img/themes/orange.png" /><p>Выбери: тема 5</p></a></div><!--
+        --><div class="mb-3"><a class="theme" href="https://lichnyj-brend.ru/settings?theme=black"><img src="img/themes/black.png" /><p>Выбери: тема 6</p></a></div><!--
+        --><div class="mb-3"><a class="theme" href="https://lichnyj-brend.ru/settings?theme=red"><img src="img/themes/red.png" /><p>Выбери: тема 7</p></a></div><!--
    --></section>
 
       <section><div class="text-center">
-        <button type="submit" class="btn btn-primary btn-lg mb-4">Попробовать</button>
+        <a href="#themes" type="submit" class="btn btn-primary btn-lg mb-4">Попробовать</a>
         <p class="text-secondary">Попробуй бесплатно&nbsp;&nbsp;&bullet; Кредитная&nbsp;карта&nbsp;не&nbsp;нужна<p>
       </div></section>
 
@@ -169,7 +170,7 @@
       </div></section>
 
       <section><div class="text-center">
-        <button type="submit" class="btn btn-primary btn-lg mb-4">Попробовать</button>
+        <a href="#themes" type="submit" class="btn btn-primary btn-lg mb-4">Попробовать</a>
         <p class="text-secondary">Попробуй бесплатно&nbsp;&nbsp;&bullet; Кредитная&nbsp;карта&nbsp;не&nbsp;нужна<p>
       </div></section>
 	<div id="pricing" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog">
@@ -323,11 +324,12 @@ function getFormData($form){
 
 $(document).ready(function(){
     var ref = getUrlParameter('ref');
-    $("#ref").val(ref);
 
-    $('.btn-primary').click(function(){
-    	$('html, body').animate({ scrollTop: 0}, 250); 
-    });
+    if (ref) {
+        $('.theme').each(function(i, obj) {
+            $(obj).attr("href", $(obj).attr("href") + "&ref=" + ref);
+        });
+    }
 
     if (false) {
         $.get("https://admapi.itsinsta.site/api/profiles/" + ref, 
@@ -341,35 +343,6 @@ $(document).ready(function(){
                 $('.referalpage').show();
             });
     }
-
-    $('form').submit(function(){
-	event.preventDefault(); //prevent default action 
-
-	var username = $(this).find('input[name="userName"]').val();
-	if (!username) return false;
-
-	var post_url = $(this).attr("action"); //get form action url
-	var request_method = $(this).attr("method"); //get form GET/POST method
-	var form_data = JSON.stringify(getFormData($(this)));
-
-	var form = $(this);
-	$.ajax({
-		url : post_url,
-		type: request_method,
-                contentType: 'application/json',
-		data : form_data
-	}).done(function(response){
-		var redirect = "http://lichnyj-brend.ru/thanks";
-                if (ref) {
-			redirect = redirect + "?ref=" + ref;
-                }
-                window.location.href = redirect;
-	}).fail(function(){
-		$('#error').text("Мы не нашли указанный Instagram");
-	});
-
-        return false;
-    });
 });
     </script>
     </div>

@@ -73,8 +73,8 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-nav"><span class="navbar-toggler-icon"></span></button>
               <div class="collapse navbar-collapse justify-content-end" id="header-nav">
                 <div class="navbar-nav">
-				  <a class="nav-item nav-link" data-toggle="modal" data-target="#pricing">Тарифы</a>
-                  <a class="nav-item nav-link" href="https://instagram.com/lichnyjbrend" target="_blank" rel="noopener">Подписаться</a>
+                  <a class="nav-item nav-link" href="https://lichnyj-brend.ru/start">Вернуться назад</a>
+				  
                 </div>
               </div>
           </nav>
@@ -83,23 +83,69 @@
       <main class="main-landing" style=" padding-top: 5em"><div class="container">
           <div class="short-description row">
             <div class="col-lg-6 col-md-6">
-              <h1>ПОЗДРАВЛЯЕМ!</h1>
-              <h5>Вы только что начали самостоятельное продвижение ЛИЧНОГО БРЕНДА</h5>
-              <p>Публикация вашего сайта завершится через <span id="counter">120</span> секунд, и вы получите ссылку. А пока посмотрите короткую презентацию сервиса: </p>
-			  <br>
-	      <span class="col-lg-8 col-md-6 col-sm-8 col-12"><iframe width="350" height="450" src="https://www.youtube.com/embed/VRRcOiDpq8g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe></span>
-			  <br><br>
-              <span class="col-lg-8 col-md-6 col-sm-8 col-12"><input disabled class="btn btn-success" type="submit" value="ПОСМОТРЕТЬ СВОЙ НОВЫЙ САЙТ"></span>
-              <br><br>
+              <h1>СПАСИБО ЗА ВАШ ИНТЕРЕС</h1>
+              <h5>Ваш сайт личного бренда будет готов очень скоро.</h5>
+              <p>Мы отправим вам в Instagram Direct ссылку для подключения. Пожалуйста, <b>подпишитесь</b> на наш Instagram, чтобы сообщение <b>не затерялось</b>, и вы бы увидели его <b>вовремя</b>.</p>
+			  <br><br><br>
+              <p class="buttond" style="text-align:center;"><a id="subscribe" href="https://www.instagram.com/lichnyjbrend/" target="_blank" style="cursor: pointer; font-size:17px;  text-decoration: none; padding:13px 20px; color:#ffffff; background-color:#46c732; border-radius:8px; border: 3px solid #;">ПОДПИСАТЬСЯ</a></p>
+
             </div>
             <div class="col-lg-6 col-md-6"><img src="img/flyer.png" /></div>
           </div>
         </div>
       </div></main>
       </div>
+
 	 
-    <script type="text/javascript" src="/static/js/bundle.js"></script>
+	<!--jQuery-->
+	<script src="js/vendors/jquery.min.js"></script>
     <script type="text/javascript" src="js/main.ac0c1bd6.js"></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(56430199, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/56430199" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+    <script type="text/javascript">
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+
+$(document).ready(function(){
+    var ref = getUrlParameter('ref');
+
+    if (false) {
+        $.get("https://admapi.itsinsta.site/api/profiles/" + ref, 
+            function(data) {
+                $('#subscribe').attr("href", data.siteUrl);
+            });
+    }
+});
+
+    </script>
+
     </div>
 </body>
 </html>
