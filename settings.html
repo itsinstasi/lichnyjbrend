@@ -170,6 +170,12 @@ $(document).ready(function(){
     $("#theme").val(theme);
     var ref = getUrlParameter('ref');
     $("#ref").val(ref);
+    var un = getUrlParameter("username");
+    if (un) {
+        $(this).find('input[name="userName"]').val(un);
+        $(this).find('input[name="userName"]').prop("readonly", true);
+        $('#inst_comment').text('');
+    }
 
     $('form').submit(function(){
         $('form .btn').prop('disabled', true);

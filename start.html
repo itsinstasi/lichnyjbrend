@@ -101,16 +101,16 @@
       <main class="main-landing"><div class="container">
           <div class="short-description row">
             <div class="col-lg-6 col-md-6">
-              <h1>ЛИЧНЫЙ БРЕНД СОЗДАЙ СЕБЕ САМ</h1>
+              <h1>ЛИЧНЫЙ БРЕНД: СОЗДАЙ СЕБЯ САМ</h1>
               <h5>Обрети славу и популярность в интернет пространстве, благодаря своему личному бренду</h5>
               <p>Представляем новую онлайн платформу для продвижения блогеров, частных специалистов и предпринимателей в Google и Яндекс, благодаря вашему контенту в Инстаграм.</p>
-              <br><br>
-			  <section>
-					<div class="text-center">
-						<a href="#themes" class="btn btn-primary btn-lg mb-4">Попробовать</a>
-						<p>Попробуй беспатно&nbsp;&bullet; Дальше&nbsp;действовать&nbsp;будет&nbsp;бренд</p>
-					</div>
-				</section>
+              <form class="form-row" action="https://admapi.itsinsta.site/api/profiles" method="post">
+                <input id="ref" type="hidden" name="ref" value="" />
+                <span class="col-lg-7 col-md-6 col-sm-8 col-12"><input class="form-control" name="userName" placeholder="Введите Instagram"></span>
+                <span class="col-lg-4 col-md-6 col-sm-4 col-12"><input class="btn btn-success" type="submit" value="Попробовать"></span>
+              </form>
+              <p id="error" style="color:red;"></p>
+              <center>Попробуй бесплатно&nbsp;&bullet; Дальше&nbsp;действовать&nbsp;будет&nbsp;бренд</center>
             </div>
             <div class="col-lg-6 col-md-6"><img src="img/phones.png" /></div>
           </div>
@@ -343,6 +343,35 @@ $(document).ready(function(){
                 $('.referalpage').show();
             });
     }
+
+    $('form').submit(function(){
+	event.preventDefault(); //prevent default action 
+
+	var username = $(this).find('input[name="userName"]').val();
+	if (!username) return false;
+
+	var post_url = $(this).attr("action"); //get form action url
+	var request_method = $(this).attr("method"); //get form GET/POST method
+	var form_data = JSON.stringify(getFormData($(this)));
+
+	var form = $(this);
+	$.ajax({
+		url : post_url,
+		type: request_method,
+                contentType: 'application/json',
+		data : form_data
+	}).done(function(response){
+		var redirect = "http://lichnyj-brend.ru/settings?username=" + username;
+                if (ref) {
+			redirect = redirect + "&ref=" + ref;
+                }
+                window.location.href = redirect;
+	}).fail(function(){
+		$('#error').text("Мы не нашли указанный Instagram");
+	});
+
+        return false;
+    });
 });
     </script>
     </div>
