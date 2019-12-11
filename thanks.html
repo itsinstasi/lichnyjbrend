@@ -89,7 +89,7 @@
 			  <br>
 	      <span class="col-lg-8 col-md-6 col-sm-8 col-12"><iframe width="90%" height="450" src="https://www.youtube.com/embed/VRRcOiDpq8g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe></span>
 			  <br><br>
-              <center><span class="col-lg-8 col-md-6 col-sm-8 col-12"><a id='site' style="background-color: lightgrey; pointer-events: none; cursor: default;" class="btn btn-success" target="_blank">ВАШ НОВЫЙ САЙТ</a></span></center>
+              <center><span class="col-lg-8 col-md-6 col-sm-8 col-12"><a id='site' style="pointer-events: none; cursor: default;" class="btn btn-success" target="_blank">Сайт будет готов через 180 секунд</a></span></center>
               <br><br>
             </div>
             <div class="col-lg-6 col-md-6"><img src="img/flyer.png" /></div>
@@ -140,16 +140,31 @@ $(document).ready(function(){
     var ref = getUrlParameter('ref');
     var username = getUrlParameter('username');
 
+var seconds = 180;
+var site = $('#site');
+var cancel = setInterval(function() {
+    seconds -= 1;
+    site.text("Сайт будет готов через " + seconds.toString() + " секунд");
+
+    if (seconds <= 0) {
+        clearInterval(cancel);
+
+        site.text = "Развертывание...";
+    }
+}, 1000);
+
     if (username) {
         var tid = setInterval(function() {
             $.getJSON("https://admapi.itsinsta.site/api/profiles/" + username, function(data){
                 var siteUrl = data.siteUrl;
 
                 if (siteUrl) {
-                    clearInterval(tid);
+                    site.attr("href", siteUrl + "/links");
+                    site.removeAttr("style");
+                    site.text("ВАШ НОВЫЙ САЙТ");
 
-                    $('#site').attr("href", siteUrl + "/links");
-                    $('#site').removeAttr("style");
+                    clearInterval(tid);
+                    clearInterval(cancel);
                 }
             });
         }, 10000);
