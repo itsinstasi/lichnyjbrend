@@ -347,6 +347,8 @@ $(document).ready(function(){
     $('form').submit(function(){
 	event.preventDefault(); //prevent default action 
 
+        $('form .btn').prop('disabled', true);
+
 	var username = $(this).find('input[name="userName"]').val();
 	if (!username) return false;
 
@@ -368,6 +370,8 @@ $(document).ready(function(){
                 window.location.href = redirect;
 	}).fail(function(){
 		$('#error').text("Мы не нашли указанный Instagram");
+
+                $('form .btn').prop('disabled', false);
 	});
 
         return false;
