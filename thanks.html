@@ -85,11 +85,12 @@
             <div class="col-lg-6 col-md-6">
               <h1>ПОЗДРАВЛЯЕМ!</h1>
               <h5>Вы только что начали самостоятельное продвижение ЛИЧНОГО БРЕНДА</h5>
-              <p>Публикация вашего сайта завершится примерно через <span id="counter">3 минуты</span>, и вы получите ссылку. А пока посмотрите короткую презентацию сервиса: </p>
+              <p>Публикация вашего сайта завершится примерно через <span id="counter">3 минуты</span>.</p>
+              <center><span class="col-lg-8 col-md-6 col-sm-8 col-12"><a id='site' style="pointer-events: none; cursor: default;" class="btn btn-success" target="_blank">До получения ссылки на сайт 180 сек</a></span></center>
+			  <br>
+              <p>А пока посмотрите короткую презентацию сервиса: </p>
 			  <br>
 	      <span class="col-lg-8 col-md-6 col-sm-8 col-12"><iframe width="90%" height="450" src="https://www.youtube.com/embed/VRRcOiDpq8g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe></span>
-			  <br><br>
-              <center><span class="col-lg-8 col-md-6 col-sm-8 col-12"><a id='site' style="pointer-events: none; cursor: default;" class="btn btn-success" target="_blank">Сайт будет готов через 180 секунд</a></span></center>
               <br><br>
             </div>
             <div class="col-lg-6 col-md-6"><img src="img/flyer.png" /></div>
@@ -144,7 +145,7 @@ var seconds = 180;
 var site = $('#site');
 var cancel = setInterval(function() {
     seconds -= 1;
-    site.text("Сайт будет готов через " + seconds.toString() + " секунд");
+    site.text("До получения ссылки на сайт " + seconds.toString() + " сек");
 
     if (seconds <= 0) {
         clearInterval(cancel);
