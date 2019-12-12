@@ -1,106 +1,236 @@
 <!DOCTYPE html>
 <html lang="Ru-ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Личный бренд | Платформа</title>
-    
-    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1"/>
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1"/>
-    <script async src="https://use.fontawesome.com/d758daec41.js"></script>   
-	<link rel="stylesheet" href="css/landing.css"/>
-    
-    <meta name="description" content="...">
-    <meta name="keywords" content="..." />
-    
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#fff">
-    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#fff">
-    
-    <link rel="image_src" href="https://.../img/og/og.jpg" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://..." />    
-    <meta property="og:image" content="https://.../img/og/og.jpg" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="1024">
-    <meta property="og:image:height" content="512">    
-    <meta property="og:title" content="..." />
-    <meta property="og:description" content="..." />
-    <meta property="og:locale" content="Ru-ru" />
-    <meta property="og:site_name" content="https://..." />
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Site Title</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--Favicons генератор https://www.favicon-generator.org/-->
+    <link rel="stylesheet" href="css/start.css"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png"/>
+    <link rel="manifest" href="img/favicon/manifest.json"/>
+    <meta name="msapplication-TileColor" content="#fff"/>
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png"/>
+    <meta name="theme-color" content="#fff"/>
+    <!--SEO-->
+    <meta name="description" content="Описание"/>
+    <meta name="keywords" content="Ключевые слова через запятую"/>
+    <!--Open Graph-->
+    <link rel="image_src" href="https://.../img/og/og.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://..."/>
+    <meta property="og:image" content="https://.../img/og/og.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image:width" content="1024"/>
+    <meta property="og:image:height" content="512"/>
+    <meta property="og:title" content="..."/>
+    <meta property="og:description" content="..."/>
+    <meta property="og:locale" content="Ru-ru"/>
+    <meta property="og:site_name" content="https://..."/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="https://..."/>
-    <meta name="twitter:title" content="...">
+    <meta name="twitter:title" content="..."/>
     <meta name="twitter:description" content="..."/>
     <meta name="twitter:creator" content="..."/>
     <meta name="twitter:image:src" content="https://.../img/og/twitter.jpg"/>
     <meta name="twitter:domain" content="https://...."/>
-    
-    <!--modernizr-->
-	<script src="js/vendors/modernizr-custom.js"></script>
-</head>
-<body class="landing">
-    
-	<!--[if lt IE 8]>
-        <p class="browserhappy">
-            Ваш браузер <strong>устарел</strong>. Пожалуйста <a href="https://browsehappy.com/"  target="_blank">обновите</a>.
-        </p>
-    <![endif]-->
-    <noscript>
-		Вам нужно включить JavaScript в своем браузере, чтобы  отображение этой страницы было корректно.
-    </noscript>
-	<body class="landing">
+    <!--Цветовое оформление окон браузеров-->
+    <meta name="theme-color" content="#272c7e"/>
+    <meta name="msapplication-navbutton-color" content="#272c7e"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#272c7e"/>
+  </head>
+  <body>
+    <div class="wrapper"><!--[if lt IE 8]>
+  <p class="intro">
+    Your browser is <strong>out of date</strong>. Please <a href="https://browsehappy.com/"  target="_blank">update it</a>.
+  </p>
+  <p class="browserhappy">
+    Ваш браузер <strong>устарел</strong>. Пожалуйста <a href="https://browsehappy.com/"  target="_blank">обновите</a>.
+  </p>
+<![endif]-->
+<noscript>
+  <p class="intro">
+  	Вам нужно включить JavaScript в своем браузере, чтобы  отображение этой страницы было корректн	<!--You need to enable JavaScript in your browser to display this page correctly.-->
+  </p>
+</noscript>
 
-    <div id="root">
+      <main class="main">
+        <header class="header">
+  <div class="header__wrapper">
+    <a href="/" class="logo">ЛИЧНЫЙ БРЕНД</a>
+    <div class="header__bar">
+      <div class="header__nav">
+        <nav class="menu">
+          <ul>
+            <li><a href="https://instagram.com/lichnyjbrend" target="_blank">Подписаться</a></li>
+          </ul>
+        </nav>        
+      </div>
+    </div>
+  </div>
+</header><section class="sec sec_dark sec_first thanks">
+  <div class="sec__bg"></div>
+  <div class="container">
+    <div class="thanks__pic">
+      <img src="img/pic/paper-plane_red.svg" alt="">
+    </div>
+    <h1 class="thanks__title">ПОЗДРАВЛЯЕМ!</h1>
+    <div class="thanks__txt">
+      <p><b>Вы только что начали самостоятельное продвижение ЛИЧНОГО БРЕНДА</b></p>
+      <p><div id="comment">Мы готовим для вас ссылку...</div></p>
 
-      <div style="padding-top: 5em; background-color: #3366CC">
-      <header class="header-landing"><div class="container">
-          <div class="itsinstasite-wrapper"><a href="/" class="itsinstasite-logo white animated">ЛИЧНЫЙ БРЕНД</a></div>
-          <nav class="navbar navbar-expand-sm navbar-dark justify-content-end p-0">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-nav"><span class="navbar-toggler-icon"></span></button>
-              <div class="collapse navbar-collapse justify-content-end" id="header-nav">
-                <div class="navbar-nav">
-				  <!--<a class="nav-item nav-link" data-toggle="modal" data-target="#pricing">Тарифы</a>-->
-                  <a class="nav-item nav-link" href="https://instagram.com/lichnyjbrend" target="_blank" rel="noopener">Подписаться</a>
-                </div>
-              </div>
-          </nav>
-      </div></header>
+      <a id="site" href="" style="pointer-events: none; cursor: default;" class="btn btn_red thanks__btn"><span>Осталось 120 сек</span></a>
 
-      <main class="main-landing" style=" padding-top: 5em"><div class="container">
-          <div class="short-description row">
-            <div class="col-lg-6 col-md-6">
-              <h1>ПОЗДРАВЛЯЕМ!</h1>
-              <h5>Вы только что начали самостоятельное продвижение ЛИЧНОГО БРЕНДА</h5>
-              <p>Публикация вашего сайта завершится примерно через <span id="counter">3 минуты</span>.</p>
-              <center><span class="col-lg-8 col-md-6 col-sm-8 col-12"><a id='site' style="pointer-events: none; cursor: default;" class="btn btn-success" target="_blank">До получения ссылки на сайт 180 сек</a></span></center>
-			  <br>
-              <p>А пока посмотрите короткую презентацию сервиса: </p>
-			  <br>
-	      <span class="col-lg-8 col-md-6 col-sm-8 col-12"><iframe width="90%" height="450" src="https://www.youtube.com/embed/VRRcOiDpq8g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe></span>
-              <br><br>
-            </div>
-            <div class="col-lg-6 col-md-6"><img src="img/flyer.png" /></div>
+      <p>А пока посмотрите короткую презентацию нашего сервиса:</p>
+    </div>
+    <div class="thanks__video">
+      <div class="thanks__video-wrap">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VRRcOiDpq8g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section><div class="popup tarrifs" id="js-popup">
+  <div class="popup__overlay" onclick="document.getElementById('js-popup').classList.toggle('open');"></div>
+  <div class="popup__wrap">
+    <div class="popup__main">
+      <button class="btn btn_close popup__close" title="Закрыть" onclick="document.getElementById('js-popup').classList.toggle('open');">Закрыть</button>
+      <h2 class="popup__title">Тарифы</h2>
+      <p class="popup__txt">* Вы не платие за клики или за посетителей, ваш трафик не ограничен на любом канале</p>
+
+      <div class="popup__tab">
+        <div class="popup__col">
+          <div class="popup__col-header">
+            <div class="popup__col-plan">Start</div>
+            <div class="popup__col-price">₽0 </div>
+            <div class="popup__col-period">навсегда</div>
+          </div>
+          <div class="popup__col-main">
+            <ul>
+              <li><span>&#10003;</span> <b>1 Инстаграм аккаунт</b></li>
+              <li><span>&#10003;</span> ∞ Мессенджеры</li>
+              <li><span>&#10003;</span> ∞ Ссылки</li>
+              <li><span>&#10003;</span> ∞ Слайдеры</li>
+              <li><span>&#10003;</span> Выбор темы</li>
+              <li><span>&#10003;</span> Раскрывающийся текст</li>
+              <li><span>&#10003;</span> <b>Рефералка 480₽</b></li>
+              <li class="excluded"><span>&#65794;</span> Лид форма</li>
+              <li class="excluded"><span>&#65794;</span> Денежный перевод</li>
+              <li class="excluded"><span>&#65794;</span> Поисковое продвидение</li>
+              <li class="excluded"><span>&#65794;</span> Аналитика</li>
+              <li class="excluded"><span>&#65794;</span> Свои скрипты</li>
+              <li class="excluded"><span>&#65794;</span> Собственный домен</li>
+            </ul>
           </div>
         </div>
-      </div></main>
-      </div>
-	 
-    <script type="text/javascript" src="/static/js/bundle.js"></script>
-    <script type="text/javascript" src="js/main.ac0c1bd6.js"></script>
+        <div class="popup__col">
+          <div class="popup__col-header">
+            <div class="popup__col-plan">Bloger</div>
+            <div class="popup__col-price">₽200</div>
+            <div class="popup__col-period">каждый месяц<br>при оплате за год</div>
+          </div>
+          <div class="popup__col-main">
+            <ul>
+              <li><span>&#10003;</span> <b>1 Инстаграм аккаунт</b></li>
+              <li><span>&#10003;</span> ∞ Мессенджеры</li>
+              <li><span>&#10003;</span> ∞ Ссылки</li>
+              <li><span>&#10003;</span> ∞ Слайдеры</li>
+              <li><span>&#10003;</span> Выбор темы</li>
+              <li><span>&#10003;</span> Раскрывающийся текст</li>
+              <li><span>&#10003;</span> <b>Рефералка 960₽</b></li>
+              <li><span>&#10003;</span> Лид форма</li>
+              <li class="excluded"><span>&#65794;</span> Денежный перевод</li>
+              <li><span>&#10003;</span> <b>Поисковое продвижение</b></li>
+              <li><span>&#10003;</span> Аналитика</li>
+              <li class="excluded"><span>&#65794;</span> Свои скрипты</li>
+              <li><span>&#10003;</span> Собственный домен</li>
+            </ul>
+          </div>
+        </div>
+        <div class="popup__col">
+          <div class="popup__col-header">
+            <div class="popup__col-plan">Business</div>
+            <div class="popup__col-price">₽300</div>
+            <div class="popup__col-period">каждый месяц<br>при оплате за год</div>
+          </div>
+          <div class="popup__col-main">
+            <ul>
+              <li><span>&#10003;</span> <b>1 Инстаграм аккаунт</b></li>
+              <li><span>&#10003;</span> ∞ Мессенджеры</li>
+              <li><span>&#10003;</span> ∞ Ссылки</li>
+              <li><span>&#10003;</span> ∞ Слайдеры</li>
+              <li><span>&#10003;</span> Выбор темы</li>
+              <li><span>&#10003;</span> Раскрывающийся текст</li>
+              <li><span>&#10003;</span> <b>MLM выплаты 40%</b></li>
+              <li><span>&#10003;</span> Лид форма</li>
+              <li><span>&#10003;</span> Денежный перевод</li>
+              <li><span>&#10003;</span> <b>Поисковое продвижение</b></li>
+              <li><span>&#10003;</span> Аналитика</li>
+              <li><span>&#10003;</span> Свои скрипты</li>
+              <li><span>&#10003;</span> Собственный домен</li>
+            </ul>
+          </div>
+        </div>
+        <div class="popup__col">
+          <div class="popup__col-header">
+            <div class="popup__col-plan">Agency</div>
+            <div class="popup__col-price">₽80.000</div>
+            <div class="popup__col-period">каждый месяц<br>при оплате за год</div>
+          </div>
+          <div class="popup__col-main">
+            <ul>
+              <li><span>&#10003;</span> <b>100 Инстаграм аккаунтов</b></li>
+              <li><span>&#10003;</span> ∞ Мессенджеры</li>
+              <li><span>&#10003;</span> ∞ Ссылки</li>
+              <li><span>&#10003;</span> ∞ Слайдеры</li>
+              <li><span>&#10003;</span> Выбор темы</li>
+              <li><span>&#10003;</span> Раскрывающийся текст</li>
+              <li class="excluded"><span>&#65794;</span> <b>Реферальных выплат нет</b></li>
+              <li><span>&#10003;</span> Лид форма</li>
+              <li><span>&#10003;</span> Денежный перевод</li>
+              <li><span>&#10003;</span> <b>Поисковое продвижение</b></li>
+              <li><span>&#10003;</span> Аналитика</li>
+              <li><span>&#10003;</span> Свои скрипты</li>
+              <li><span>&#10003;</span> Собственный домен</li>
+            </ul>
+          </div>
+        </div>        
+
+
+
+    </div>
+  </div>
+</div>
+
+      </main>
+      <footer class="footer footer_dark">
+        <div class="container">
+          <div class="footer__wrap"><a class="logo" href="/">ЛИЧНЫЙ БРЕНД</a>
+            <nav class="menu">
+              <ul>
+                <li><a href="main">Блог</a></li>
+                <li>
+                  <button class="btn js-tarrifs-btn" onclick="document.getElementById('js-popup').classList.toggle('open');">Тарифы</button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </footer>
+      <script src="js/vendors.min.js"></script>
+      <script src="js/scripts.min.js"></script>
+      <script src="js/vendors/jquery.min.js"></script>
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
@@ -117,9 +247,6 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/56430199" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-
-	<!--jQuery-->
-	<script src="js/vendors/jquery.min.js"></script>
 
 <script type="text/javascript" >
 var getUrlParameter = function getUrlParameter(sParam) {
@@ -141,11 +268,12 @@ $(document).ready(function(){
     var ref = getUrlParameter('ref');
     var username = getUrlParameter('username');
 
-var seconds = 180;
+var seconds = 120;
 var site = $('#site');
+
 var cancel = setInterval(function() {
     seconds -= 1;
-    site.text("До получения ссылки на сайт " + seconds.toString() + " сек");
+    site.text("Осталось " + seconds.toString() + " сек");
 
     if (seconds <= 0) {
         clearInterval(cancel);
@@ -162,7 +290,8 @@ var cancel = setInterval(function() {
                 if (siteUrl) {
                     site.attr("href", siteUrl + "/links");
                     site.removeAttr("style");
-                    site.text("ВАШ НОВЫЙ САЙТ");
+                    site.text("Ваш новый сайт");
+                    $("#comment").text("Публикация вашего сайта завершена.");
 
                     clearInterval(tid);
                     clearInterval(cancel);
@@ -174,5 +303,5 @@ var cancel = setInterval(function() {
 
 </script>
     </div>
-</body>
+  </body>
 </html>

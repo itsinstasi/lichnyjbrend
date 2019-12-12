@@ -1,119 +1,290 @@
 <!DOCTYPE html>
 <html lang="Ru-ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Личный бренд | Платформа</title>
-    
-    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1"/>
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1"/>
-    <script async src="https://use.fontawesome.com/d758daec41.js"></script>   
-	<link rel="stylesheet" href="css/landing.css"/>
-    
-    <meta name="description" content="...">
-    <meta name="keywords" content="..." />
-    
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#fff">
-    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#fff">
-    
-    <link rel="image_src" href="https://.../img/og/og.jpg" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://..." />    
-    <meta property="og:image" content="https://.../img/og/og.jpg" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="1024">
-    <meta property="og:image:height" content="512">    
-    <meta property="og:title" content="..." />
-    <meta property="og:description" content="..." />
-    <meta property="og:locale" content="Ru-ru" />
-    <meta property="og:site_name" content="https://..." />
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Site Title</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--Favicons генератор https://www.favicon-generator.org/-->
+    <link rel="stylesheet" href="css/start.css"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png"/>
+    <link rel="manifest" href="img/favicon/manifest.json"/>
+    <meta name="msapplication-TileColor" content="#fff"/>
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png"/>
+    <meta name="theme-color" content="#fff"/>
+    <!--SEO-->
+    <meta name="description" content="Описание"/>
+    <meta name="keywords" content="Ключевые слова через запятую"/>
+    <!--Open Graph-->
+    <link rel="image_src" href="https://.../img/og/og.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://..."/>
+    <meta property="og:image" content="https://.../img/og/og.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image:width" content="1024"/>
+    <meta property="og:image:height" content="512"/>
+    <meta property="og:title" content="..."/>
+    <meta property="og:description" content="..."/>
+    <meta property="og:locale" content="Ru-ru"/>
+    <meta property="og:site_name" content="https://..."/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="https://..."/>
-    <meta name="twitter:title" content="...">
+    <meta name="twitter:title" content="..."/>
     <meta name="twitter:description" content="..."/>
     <meta name="twitter:creator" content="..."/>
     <meta name="twitter:image:src" content="https://.../img/og/twitter.jpg"/>
     <meta name="twitter:domain" content="https://...."/>
-    
-    <!--modernizr-->
-	<script src="js/vendors/modernizr-custom.js"></script>
-</head>
-<body class="landing">
-    
-	<!--[if lt IE 8]>
-        <p class="browserhappy">
-            Ваш браузер <strong>устарел</strong>. Пожалуйста <a href="https://browsehappy.com/"  target="_blank">обновите</a>.
-        </p>
-    <![endif]-->
-    <noscript>
-		Вам нужно включить JavaScript в своем браузере, чтобы  отображение этой страницы было корректно.
-    </noscript>
-	<body class="landing">
+    <!--Цветовое оформление окон браузеров-->
+    <meta name="theme-color" content="#272c7e"/>
+    <meta name="msapplication-navbutton-color" content="#272c7e"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#272c7e"/>
+  </head>
+  <body>
+    <div class="wrapper"><!--[if lt IE 8]>
+  <p class="intro">
+    Your browser is <strong>out of date</strong>. Please <a href="https://browsehappy.com/"  target="_blank">update it</a>.
+  </p>
+  <p class="browserhappy">
+    Ваш браузер <strong>устарел</strong>. Пожалуйста <a href="https://browsehappy.com/"  target="_blank">обновите</a>.
+  </p>
+<![endif]-->
+<noscript>
+  <p class="intro">
+  	Вам нужно включить JavaScript в своем браузере, чтобы  отображение этой страницы было корректн	<!--You need to enable JavaScript in your browser to display this page correctly.-->
+  </p>
+</noscript>
 
-    <div id="root">
-
-      <div style="padding-top: 5em; background-color: #3366CC">
-      <header class="header-landing"><div class="container">
-          <div class="itsinstasite-wrapper"><a href="/" class="itsinstasite-logo white animated">ЛИЧНЫЙ БРЕНД</a></div>
-          <nav class="navbar navbar-expand-sm navbar-dark justify-content-end p-0">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-nav"><span class="navbar-toggler-icon"></span></button>
-              <div class="collapse navbar-collapse justify-content-end" id="header-nav">
-                <div class="navbar-nav">
-                  <a class="nav-item nav-link" href="https://lichnyj-brend.ru/start">Выбрать другую тему</a>
-				  
-                </div>
-              </div>
-          </nav>
-      </div></header>
-
-      <main class="main-landing" style=" padding-top: 5em"><div class="container">
-          <div class="short-description row">
-            <div class="col-lg-6 col-md-6">
-              <h1>Ваш сайт ЛИЧНОГО БРЕНДА готов на 75%</h1>
-              <h5>Чтобы вашим подписчикам было удобно связываься с вами, вы можете добавить свои мессенджеры</h5>
-              <p>Еще больше возможностей будут доступны после публикации БЕСПЛАТНОЙ странички ссылок</p>
-			  <br><br><br>
-              <!--<p class="buttond"  style="text-align:center;"><a href="https://www.instagram.com/lichnyjbrend/" target="_blank" style="cursor: pointer; font-size:17px;  text-decoration: none; padding:13px 20px; color:#ffffff; background-color:#46c732; border-radius:8px; border: 3px solid #;">ПОДПИСАТЬСЯ ДЛЯ ПОДТВЕРЖДЕНИЯ</a></p>-->
-	    <form class="form-row" action="https://admapi.itsinsta.site/api/profiles" method="post">
-                <input type="hidden" name="ref" id="ref" value="" />
-                <input type="hidden" name="theme" id="theme" value="" />
-                <span class="col-lg-11 col-md-6 col-sm-12 col-12"><input class="form-control" name="userName" type="text" placeholder="Instagram для интеграции"></span>
-		<span id="inst_comment" class="col-lg-11 col-md-6 col-sm-12 col-12">Ваш сайт ЛИЧНОГО БРЕНДА создается из вашего контента в Инстаграм, это поле ОБЯЗАТЕЛЬНОЕ.</span>
-		<span id="error" style="color:red;" class="col-lg-11 col-md-6 col-sm-12 col-12"></span>
-                <span class="col-lg-11 col-md-6 col-sm-12 col-12"><input class="form-control" name="email" type="email" placeholder="E-mail для заявок"></span>
-		<span class="col-lg-11 col-md-6 col-sm-12 col-12">Вы сможете получать заявки с вашего сайта на почту.</span>
-		<!--<span class="col-lg-11 col-md-6 col-sm-12 col-12">Чтобы получать заявки с вашего сайта на почту, подтвердите свой Email. Для этого откройте указанную почту и пройдите по ссылке.</span>-->
-                <span class="col-lg-11 col-md-6 col-sm-12 col-12"><input class="form-control" name="whatsapp" type="tel" placeholder="Ваш WhatsApp (опционально)"></span>
-                <span class="col-lg-11 col-md-6 col-sm-12 col-12"><input class="form-control" name="viber" type="tel" placeholder="Ваш Viber (опционально)"></span>
-                <span class="col-lg-11 col-md-6 col-sm-12 col-12"><input class="form-control" name="telegram" type="text" placeholder="Ваш Telegram (опционально)"></span>
-                <span class="col-lg-11 col-md-6 col-sm-12 col-12"><input class="form-control" name="site" type="url" placeholder="Ваш сайт (опционально)"></span>
-                <span class="col-lg-11 col-md-6 col-sm-12 col-12"><input class="btn btn-success" type="submit" value="Подтвердить"></span>
-                <span class="col-lg-11 col-md-6 col-sm-12 col-12">&nbsp;</span>
-            </form>
+      <main class="main">
+        <header class="header">
+  <div class="header__wrapper">
+    <a href="/" class="logo">ЛИЧНЫЙ БРЕНД</a>
+    <div class="header__bar">
+      <div class="header__nav">
+        <!--<nav class="menu">
+          <ul>
+            <li><a href="index.html#skins">Выбрать другую тему</a></li>
+          </ul>
+        </nav>-->        
+      </div>
+    </div>
+  </div>
+</header><section class="sec sec_dark sec_first settings">
+  <div class="sec__bg"></div>
+  <div class="container">
+    <div class="settings__wrap">
+     <div class="settings__fig">
+        <img id="js-skin-pic" src="img/pic/black.png" alt="">
+      </div>
+      <div class="settings__main">
+        <h1 class="settings__title">
+          Ваш сайт <span>ЛИЧНОГО БРЕНДА</span> готов на 75%
+        </h1>
+        <div class="settings__txt">
+          <p><b>Чтобы вашим подписчикам было удобно связываься с вами, вы можете добавить свои мессенджеры</b></p>
+          <p>Еще больше возможностей будут доступны после публикации <strong>БЕСПЛАТНОЙ</strong> странички ссылок</p>
+        </div>
+        <form action="https://admapi.itsinsta.site/api/profiles" method="post" class="settings__form">
+          <input type="hidden" name="ref" id="ref" value="" />
+          <div class="settings__form-group">
+            <div class="settings__form-row">
+              <label class="settings__form-label">
+                <span class="settings__form-title">Введите Ваш Instagram *</span>
+                <input class="input settings__form-input" type="text" name="userName" placeholder="user_name" required>
+              </label>
+              <button id="check_btn" class="btn settings__form-submit" type="button">Проверить</button>
             </div>
-            <div class="col-lg-5 col-md-5"><img id="demo" src="" /></div>
+            <small id="error" class="settings__form-small error"></small>
+            <small id="inst_comment" class="settings__form-small">Ваш сайт ЛИЧНОГО БРЕНДА создается из вашего контента в Инстаграм, это&nbsp;поле&nbsp;ОБЯЗАТЕЛЬНОЕ.</small>
+          </div>
+          <label class="settings__form-label">
+            <span class="settings__form-title">E-mail для заявок *</span>
+            <input class="input settings__form-input" type="email" name="email" placeholder="user_name@site.com">
+            <small class="settings__form-small">Вы сможете получать заявки с вашего сайта на почту.</small>            
+          </label>
+          <div class="settings__form-label">
+            <span class="settings__form-title">Ваша тема</span>
+            <div class="styled-select js-styled-select">
+              <select id="js-scin-pic-select" name="theme">
+                <option></option>
+                <option value="pink">Тема 1</option>
+                <option value="marine">Тема 2</option>
+                <option value="gold">Тема 3</option>
+                <option value="violet">Тема 4</option>
+                <option value="orange">Тема 5</option>
+                <option value="black">Тема 6</option>
+                <option value="red">Тема 7</option>
+              </select>
+<!--
+              <script>
+                this.value
+              </script>
+-->
+            </div>
+          </div>
+          <label class="settings__form-label">
+            <span class="settings__form-title">Ваш WhatsApp (опционально)</span>
+            <input class="input settings__form-input" type="tel" name="whatsapp" >
+          </label>
+          <label class="settings__form-label">
+            <span class="settings__form-title">Ваш Viber (опционально)</span>
+            <input class="input settings__form-input" type="tel" name="viber" >
+          </label>
+          <label class="settings__form-label">
+            <span class="settings__form-title">Ваш Telegram (опционально)</span>
+            <input class="input settings__form-input" type="text" name="telegram" >
+          </label>
+          <label class="settings__form-label">
+            <span class="settings__form-title">Ваш сайт (опционально)</span>
+            <input class="input settings__form-input" type="url" name="site" placeholder="http://my_site.ru">
+          </label>
+          <button id="confirm_btn" class="btn settings__form-submit" type="submit">Подтвердить</button>
+          
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</section><div class="popup tarrifs" id="js-popup">
+  <div class="popup__overlay" onclick="document.getElementById('js-popup').classList.toggle('open');"></div>
+  <div class="popup__wrap">
+    <div class="popup__main">
+      <button class="btn btn_close popup__close" title="Закрыть" onclick="document.getElementById('js-popup').classList.toggle('open');">Закрыть</button>
+      <h2 class="popup__title">Тарифы</h2>
+      <p class="popup__txt">* Вы не платие за клики или за посетителей, ваш трафик не ограничен на любом канале</p>
+
+      <div class="popup__tab">
+        <div class="popup__col">
+          <div class="popup__col-header">
+            <div class="popup__col-plan">Start</div>
+            <div class="popup__col-price">₽0 </div>
+            <div class="popup__col-period">навсегда</div>
+          </div>
+          <div class="popup__col-main">
+            <ul>
+              <li><span>&#10003;</span> <b>1 Инстаграм аккаунт</b></li>
+              <li><span>&#10003;</span> ∞ Мессенджеры</li>
+              <li><span>&#10003;</span> ∞ Ссылки</li>
+              <li><span>&#10003;</span> ∞ Слайдеры</li>
+              <li><span>&#10003;</span> Выбор темы</li>
+              <li><span>&#10003;</span> Раскрывающийся текст</li>
+              <li><span>&#10003;</span> <b>Рефералка 480₽</b></li>
+              <li class="excluded"><span>&#65794;</span> Лид форма</li>
+              <li class="excluded"><span>&#65794;</span> Денежный перевод</li>
+              <li class="excluded"><span>&#65794;</span> Поисковое продвидение</li>
+              <li class="excluded"><span>&#65794;</span> Аналитика</li>
+              <li class="excluded"><span>&#65794;</span> Свои скрипты</li>
+              <li class="excluded"><span>&#65794;</span> Собственный домен</li>
+            </ul>
           </div>
         </div>
-      </div></main>
-      </div>
-	 
-    <script type="text/javascript" src="/static/js/bundle.js"></script>
-    <script type="text/javascript" src="js/main.ac0c1bd6.js"></script>
+        <div class="popup__col">
+          <div class="popup__col-header">
+            <div class="popup__col-plan">Bloger</div>
+            <div class="popup__col-price">₽200</div>
+            <div class="popup__col-period">каждый месяц<br>при оплате за год</div>
+          </div>
+          <div class="popup__col-main">
+            <ul>
+              <li><span>&#10003;</span> <b>1 Инстаграм аккаунт</b></li>
+              <li><span>&#10003;</span> ∞ Мессенджеры</li>
+              <li><span>&#10003;</span> ∞ Ссылки</li>
+              <li><span>&#10003;</span> ∞ Слайдеры</li>
+              <li><span>&#10003;</span> Выбор темы</li>
+              <li><span>&#10003;</span> Раскрывающийся текст</li>
+              <li><span>&#10003;</span> <b>Рефералка 960₽</b></li>
+              <li><span>&#10003;</span> Лид форма</li>
+              <li class="excluded"><span>&#65794;</span> Денежный перевод</li>
+              <li><span>&#10003;</span> <b>Поисковое продвижение</b></li>
+              <li><span>&#10003;</span> Аналитика</li>
+              <li class="excluded"><span>&#65794;</span> Свои скрипты</li>
+              <li><span>&#10003;</span> Собственный домен</li>
+            </ul>
+          </div>
+        </div>
+        <div class="popup__col">
+          <div class="popup__col-header">
+            <div class="popup__col-plan">Business</div>
+            <div class="popup__col-price">₽300</div>
+            <div class="popup__col-period">каждый месяц<br>при оплате за год</div>
+          </div>
+          <div class="popup__col-main">
+            <ul>
+              <li><span>&#10003;</span> <b>1 Инстаграм аккаунт</b></li>
+              <li><span>&#10003;</span> ∞ Мессенджеры</li>
+              <li><span>&#10003;</span> ∞ Ссылки</li>
+              <li><span>&#10003;</span> ∞ Слайдеры</li>
+              <li><span>&#10003;</span> Выбор темы</li>
+              <li><span>&#10003;</span> Раскрывающийся текст</li>
+              <li><span>&#10003;</span> <b>MLM выплаты 40%</b></li>
+              <li><span>&#10003;</span> Лид форма</li>
+              <li><span>&#10003;</span> Денежный перевод</li>
+              <li><span>&#10003;</span> <b>Поисковое продвижение</b></li>
+              <li><span>&#10003;</span> Аналитика</li>
+              <li><span>&#10003;</span> Свои скрипты</li>
+              <li><span>&#10003;</span> Собственный домен</li>
+            </ul>
+          </div>
+        </div>
+        <div class="popup__col">
+          <div class="popup__col-header">
+            <div class="popup__col-plan">Agency</div>
+            <div class="popup__col-price">₽80.000</div>
+            <div class="popup__col-period">каждый месяц<br>при оплате за год</div>
+          </div>
+          <div class="popup__col-main">
+            <ul>
+              <li><span>&#10003;</span> <b>100 Инстаграм аккаунтов</b></li>
+              <li><span>&#10003;</span> ∞ Мессенджеры</li>
+              <li><span>&#10003;</span> ∞ Ссылки</li>
+              <li><span>&#10003;</span> ∞ Слайдеры</li>
+              <li><span>&#10003;</span> Выбор темы</li>
+              <li><span>&#10003;</span> Раскрывающийся текст</li>
+              <li class="excluded"><span>&#65794;</span> <b>Реферальных выплат нет</b></li>
+              <li><span>&#10003;</span> Лид форма</li>
+              <li><span>&#10003;</span> Денежный перевод</li>
+              <li><span>&#10003;</span> <b>Поисковое продвижение</b></li>
+              <li><span>&#10003;</span> Аналитика</li>
+              <li><span>&#10003;</span> Свои скрипты</li>
+              <li><span>&#10003;</span> Собственный домен</li>
+            </ul>
+          </div>
+        </div>        
+
+
+
     </div>
+  </div>
+</div>
+
+      </main>
+      <footer class="footer footer_dark">
+        <div class="container">
+          <div class="footer__wrap"><a class="logo" href="/">ЛИЧНЫЙ БРЕНД</a>
+            <nav class="menu">
+              <ul>
+                <li><a href="main">Блог</a></li>
+                <li>
+                  <button class="btn js-tarrifs-btn" onclick="document.getElementById('js-popup').classList.toggle('open');">Тарифы</button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </footer>
+      <script src="js/vendors.min.js"></script>
+      <script src="js/vendors/jquery.min.js"></script>
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
@@ -130,9 +301,6 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/56430199" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-
-	<!--jQuery-->
-	<script src="js/vendors/jquery.min.js"></script>
 
 <script type="text/javascript" >
 var getUrlParameter = function getUrlParameter(sParam) {
@@ -161,35 +329,76 @@ function getFormData($form){
     return indexed_array;
 }
 
-$(document).ready(function(){
     var theme = getUrlParameter("theme");
     if (!theme) {
        theme = "violet";
     }
-    $('#demo').attr("src", "img/themes/" + theme + ".png");
-    $("#theme").val(theme);
+    $('#js-skin-pic').attr('src', 'img/pic/'+ theme + '.png')
+    $("#js-scin-pic-select").val(theme);
+
+$(document).ready(function(){
     var ref = getUrlParameter('ref');
     $("#ref").val(ref);
+
     var un = getUrlParameter("username");
     if (un) {
         $(this).find('input[name="userName"]').val(un);
         $(this).find('input[name="userName"]').prop("readonly", true);
+        $('#check_btn').attr("disabled", true);
         $('#inst_comment').text('');
+    } else {
+        $('#confirm_btn').attr("disabled", true);
     }
 
-    $('form').submit(function(){
-        $('form .btn').prop('disabled', true);
+    var form = $('form');
+    $("#check_btn").click(function() {
+	event.preventDefault(); //prevent default action 
 
+	var username = form.find('input[name="userName"]').val();
+	if (!username) return false;
+
+        $('#check_btn').prop('disabled', true);
+
+	var post_url = form.attr("action"); //get form action url
+	var request_method = form.attr("method"); //get form GET/POST method
+	var form_data = JSON.stringify({ userName: username });
+
+        $('#inst_comment').text('Проверяем...');
+	$('#error').text("");
+
+	$.ajax({
+		url : post_url,
+		type: request_method,
+                contentType: 'application/json',
+		data : form_data
+	}).done(function(response){
+            $('#inst_comment').text('Учетная запись Instagram подтверждена');
+            $('#error').text("");
+            form.find('input[name="userName"]').prop("readonly", true);
+
+            $('#confirm_btn').attr("disabled", false);
+	}).fail(function(){
+                $('#inst_comment').text('');
+		$('#error').text("Учетная запись Instagram не найдена");
+
+                $('#check_btn').prop('disabled', false);
+	});
+
+        return false;
+    });
+
+    form.submit(function(){
 	event.preventDefault(); //prevent default action 
 
 	var username = $(this).find('input[name="userName"]').val();
 	if (!username) return false;
 
-	var post_url = $(this).attr("action"); //get form action url
-	var request_method = $(this).attr("method"); //get form GET/POST method
+        $('#confirm_btn').prop('disabled', true);
+
+	var post_url = form.attr("action"); //get form action url
+	var request_method = form.attr("method"); //get form GET/POST method
 	var form_data = JSON.stringify(getFormData($(this)));
 
-	var form = $(this);
 	$.ajax({
 		url : post_url,
 		type: request_method,
@@ -203,9 +412,9 @@ $(document).ready(function(){
                 window.location.href = redirect;
 	}).fail(function(){
                 $('#inst_comment').text('');
-		$('#error').text("Мы не нашли указанный Instagram");
+		$('#error').text("Учетная запись Instagram не найдена");
 
-                $('form .btn').prop('disabled', false);
+                $('#confirm_btn').prop('disabled', false);
 	});
 
         return false;
@@ -213,6 +422,8 @@ $(document).ready(function(){
 });
 
 </script>
+      <script src="js/scripts.min.js"></script>
 
-</body>
+    </div>
+  </body>
 </html>
