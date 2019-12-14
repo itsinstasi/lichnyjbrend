@@ -7,7 +7,28 @@
     <p>Пожалуйста, перейдите <a href="//lichnyj-brend.ru/">по этой ссылке</a>.</p>
 
     <script type="text/javascript">
-window.location.replace("https://lichnyj-brend.ru");
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+
+var link = "https://lichnyj-brend.ru";
+var ref = getUrlParameter('ref');
+if (ref) {
+    link = link + "&ref=" + ref;
+}
+
+window.location.replace(link);
     </script>
   </body>
 </html>
