@@ -68,17 +68,17 @@
 
       <main class="main">
         <header class="header">
-  <!--<div class="header-sup">
+  <div id="header" style="display: none" class="header-sup">
       <div class="header__wrap">
           <div class="header__left">
-              <a href="./main.html" class="header__logo">
-                  <div class="header__logo-pic"><img src="https://scontent-arn2-2.cdninstagram.com/v/t51.2885-19/s150x150/73470476_448846125820749_1867893556341899264_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&amp;oh=bb9989dd48c23aea502a2512c77d48ed&amp;oe=5E864B96" alt="Наталья Шишина"></div>
-                  <div class="header__logo-txt">nataliav_sh</div>
+              <a href="./main.html" target="_blank" class="header__logo">
+                  <div class="header__logo-pic"><img src="" alt=""></div>
+                  <div class="header__logo-txt"></div>
               </a>
-              <div class="header__title">Наталья Шишина</div>
+              <div class="header__title"></div>
           </div>
       </div>
-  </div>-->
+  </div>
   <div class="header__wrapper">
     <a href="/" class="logo">ЛИЧНЫЙ БРЕНД</a>
     <div class="header__bar">
@@ -713,18 +713,13 @@ $(document).ready(function(){
         $('.theme').each(function(i, obj) {
             $(obj).attr("href", $(obj).attr("href") + "&ref=" + ref);
         });
-    }
-
-    if (false) {
         $.get("https://admapi.itsinsta.site/api/profiles/" + ref, 
             function(data) { 
-                $('#refLink').attr("href", data.siteUrl);
-                $('#refLogo').attr("src", data.logoUrl);
-                $('#refUserName').html(data.userName);
-
-                $('.blog').attr("href", data.siteUrl);
-
-                $('.referalpage').show();
+                $("#header").show();
+                $("#header").find(".header__logo").attr("href", data.siteUrl);
+                $("#header").find(".header__logo-pic").find("img").attr("src", data.logoUrl);
+                $("#header").find(".header__logo-txt").text(data.userName);
+                $("#header").find(".header__title").text(data.title);
             });
     }
 
