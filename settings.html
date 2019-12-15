@@ -98,22 +98,6 @@
         </div>
         <form action="https://admapi.itsinsta.site/api/profiles" method="post" class="settings__form">
           <input type="hidden" name="ref" id="ref" value="" />
-          <div class="settings__form-group">
-            <div class="settings__form-row">
-              <label class="settings__form-label">
-                <span class="settings__form-title">Введите Ваш Instagram *</span>
-                <input class="input settings__form-input" type="text" name="userName" placeholder="user_name" required>
-              </label>
-              <button id="check_btn" class="btn settings__form-submit" type="button">Проверить</button>
-            </div>
-            <small id="error" class="settings__form-small error"></small>
-            <small id="inst_comment" class="settings__form-small">Ваш сайт ЛИЧНОГО БРЕНДА создается из вашего контента в Инстаграм, это&nbsp;поле&nbsp;ОБЯЗАТЕЛЬНОЕ.</small>
-          </div>
-          <label class="settings__form-label">
-            <span class="settings__form-title">E-mail для заявок *</span>
-            <input class="input settings__form-input" type="email" name="email" placeholder="user_name@site.com">
-            <small class="settings__form-small">Вы сможете получать заявки с вашего сайта на почту.</small>            
-          </label>
           <div class="settings__form-label">
             <span class="settings__form-title">Ваша тема</span>
             <div class="styled-select js-styled-select">
@@ -134,6 +118,22 @@
 -->
             </div>
           </div>
+          <div class="settings__form-group">
+            <div class="settings__form-row">
+              <label class="settings__form-label">
+                <span class="settings__form-title">Введите Ваш Instagram *</span>
+                <input class="input settings__form-input" type="text" name="userName" placeholder="user_name" required>
+              </label>
+              <button id="check_btn" class="btn settings__form-submit" type="button">Проверить</button>
+            </div>
+            <small id="error" class="settings__form-small error"></small>
+            <small id="inst_comment" class="settings__form-small">Ваш сайт ЛИЧНОГО БРЕНДА создается из вашего контента в Инстаграм, это&nbsp;поле&nbsp;ОБЯЗАТЕЛЬНОЕ.</small>
+          </div>
+          <label class="settings__form-label">
+            <span class="settings__form-title">E-mail для заявок *</span>
+            <input class="input settings__form-input" type="email" name="email" placeholder="user_name@site.com">
+            <small class="settings__form-small">Вы сможете получать заявки с вашего сайта на почту.</small>            
+          </label>
           <label class="settings__form-label">
             <span class="settings__form-title">Ваш WhatsApp (опционально)</span>
             <input class="input settings__form-input" type="tel" name="whatsapp" >
@@ -183,12 +183,14 @@
               <li><span>&#10003;</span> <b>Рефералка 480₽</b></li>
               <li class="excluded"><span>&#65794;</span> Лид форма</li>
               <li class="excluded"><span>&#65794;</span> Денежный перевод</li>
-              <li class="excluded"><span>&#65794;</span> Поисковое продвидение</li>
+              <li class="excluded"><span>&#65794;</span>&nbsp;Поисковое&nbsp;продвижение</li>
               <li class="excluded"><span>&#65794;</span> Аналитика</li>
               <li class="excluded"><span>&#65794;</span> Свои скрипты</li>
               <li class="excluded"><span>&#65794;</span> Собственный домен</li>
+              <li class="excluded"><span>&#65794;</span> Landing page</li>
             </ul>
           </div>
+          <a href="settings.html" class="btn btn_red sec__footer-btn"><span>Попробовать</span></a>
         </div>
         <div class="popup__col">
           <div class="popup__col-header">
@@ -207,12 +209,14 @@
               <li><span>&#10003;</span> <b>Рефералка 960₽</b></li>
               <li><span>&#10003;</span> Лид форма</li>
               <li class="excluded"><span>&#65794;</span> Денежный перевод</li>
-              <li><span>&#10003;</span> <b>Поисковое продвижение</b></li>
+              <li><span>&#10003;</span>&nbsp;<b>Поисковое&nbsp;продвижение</b></li>
               <li><span>&#10003;</span> Аналитика</li>
               <li class="excluded"><span>&#65794;</span> Свои скрипты</li>
               <li><span>&#10003;</span> Собственный домен</li>
+              <li class="excluded"><span>&#65794;</span> Landing page</li>
             </ul>
           </div>
+          <a onclick="window.open('https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=Тариф Bloger&targets-hint=&default-sum=2400&button-text=12&payment-type-choice=on&mail=on&comment=on&hint=Укажите ваш Instagram аккаунт&label=lichnyj-brend.ru&quickpay=shop&account=410015237072018');" class="btn btn_red sec__footer-btn"><span>Оплатить</span></a>
         </div>
         <div class="popup__col">
           <div class="popup__col-header">
@@ -231,12 +235,14 @@
               <li><span>&#10003;</span> <b>MLM выплаты 40%</b></li>
               <li><span>&#10003;</span> Лид форма</li>
               <li><span>&#10003;</span> Денежный перевод</li>
-              <li><span>&#10003;</span> <b>Поисковое продвижение</b></li>
+              <li><span>&#10003;</span>&nbsp;<b>Поисковое&nbsp;продвижение</b></li>
               <li><span>&#10003;</span> Аналитика</li>
               <li><span>&#10003;</span> Свои скрипты</li>
               <li><span>&#10003;</span> Собственный домен</li>
+              <li><span>&#10003;</span> Landing page</li>
             </ul>
           </div>
+          <a onclick="window.open('https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=Тариф Business&targets-hint=&default-sum=3600&button-text=12&payment-type-choice=on&mail=on&comment=on&hint=Укажите ваш Instagram аккаунт&label=lichnyj-brend.ru&quickpay=shop&account=410015237072018');" class="btn btn_red sec__footer-btn"><span>Оплатить</span></a>
         </div>
         <div class="popup__col">
           <div class="popup__col-header">
@@ -252,15 +258,17 @@
               <li><span>&#10003;</span> ∞ Слайдеры</li>
               <li><span>&#10003;</span> Выбор темы</li>
               <li><span>&#10003;</span> Раскрывающийся текст</li>
-              <li class="excluded"><span>&#65794;</span> <b>Реферальных выплат нет</b></li>
+              <li class="excluded"><span>&#65794;</span>&nbsp;Реферальных&nbsp;выплат&nbsp;нет</li>
               <li><span>&#10003;</span> Лид форма</li>
               <li><span>&#10003;</span> Денежный перевод</li>
-              <li><span>&#10003;</span> <b>Поисковое продвижение</b></li>
+              <li><span>&#10003;</span>&nbsp;<b>Поисковое&nbsp;продвижение</b></li>
               <li><span>&#10003;</span> Аналитика</li>
               <li><span>&#10003;</span> Свои скрипты</li>
               <li><span>&#10003;</span> Собственный домен</li>
+              <li><span>&#10003;</span> Landing page</li>
             </ul>
           </div>
+          <a href="links.html" target="_blank" class="btn btn_red sec__footer-btn"><span>Связаться</span></a>
         </div>        
 
 
@@ -356,13 +364,14 @@ $(document).ready(function(){
 	event.preventDefault(); //prevent default action 
 
 	var username = form.find('input[name="userName"]').val();
+        var theme = $("#js-scin-pic-select").val();
 	if (!username) return false;
 
         $('#check_btn').prop('disabled', true);
 
 	var post_url = form.attr("action"); //get form action url
 	var request_method = form.attr("method"); //get form GET/POST method
-	var form_data = JSON.stringify({ userName: username });
+	var form_data = JSON.stringify({ userName: username, theme: theme });
 
         $('#inst_comment').text('Проверяем...');
 	$('#error').text("");
