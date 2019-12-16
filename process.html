@@ -32,12 +32,12 @@
       <main class="main">
         <header class="header">
   <div class="header__wrapper">
-    <a href="/" class="logo">ЛИЧНЫЙ БРЕНД</a>
+    <a href="https://lichnyj-brend.ru" class="logo">ЛИЧНЫЙ БРЕНД</a>
     <div class="header__bar">
       <div class="header__nav">
         <nav class="menu">
           <ul>
-            <li><a href="index.html#skins">Подписаться</a></li>
+            <li><a href="https://instagram.com/lichnyjbrend" target="_blank">Подписаться</a></li>
           </ul>
         </nav>        
       </div>
@@ -55,7 +55,7 @@
         <div class='sk-rect sk-rect-5'></div>
       </div>
     </div>
-    <h1 class="thanks__title"><span>Идет</span><br> инициализация сайта</h1>
+    <h1 class="thanks__title"><span>Идет</span><br> проверка сайта</h1>
     <div class="thanks__txt">
       <p>Пожалуйста, дождитесь окончания</p>
       <p><b>До окончания осталось:</b></p>
@@ -77,7 +77,7 @@
       <li class="log__item"><i>&#10003;</i>Создание микроразметки для Yandex<span>&#8230;</span></li>
       <li class="log__item"><i>&#10003;</i>Загрузка последних 18 постов<span>&#8230;</span></li>
       <li class="log__item"><i>&#10003;</i>Преобразование постов в сайт<span>&#8230;</span></li>
-      <li class="log__item active"><i>&#10003;</i>Публикация сайта в сети Интернет<span>&#8230;</span></li>
+      <li class="log__item"><i>&#10003;</i>Публикация сайта в сети Интернет<span>&#8230;</span></li>
     </ul>
   </div>
 </section><div class="popup tarrifs" id="js-popup">
@@ -203,10 +203,10 @@
       </main>
       <footer class="footer footer_dark">
         <div class="container">
-          <div class="footer__wrap"><a class="logo" href="/">ЛИЧНЫЙ БРЕНД</a>
+          <div class="footer__wrap"><a class="logo" href="https://lichnyj-brend.ru">ЛИЧНЫЙ БРЕНД</a>
             <nav class="menu">
               <ul>
-                <li><a href="#">Блог</a></li>
+                <li><a href="https://lichnyj-brend.ru">Блог</a></li>
                 <li>
                   <button class="btn js-tarrifs-btn" onclick="document.getElementById('js-popup').classList.toggle('open');">Тарифы</button>
                 </li>
@@ -221,8 +221,7 @@
 
 	<script type="text/javascript">
 //timer
-if(document.getElementById('js-timer')){
-	function getTimeRemaining(endtime) {
+function getTimeRemaining(endtime) {
 	  var t = Date.parse(endtime) - Date.parse(new Date());
 	  var seconds = Math.floor((t / 1000) % 60);
 	  var minutes = Math.floor((t / 1000 / 60) % 60);
@@ -259,29 +258,47 @@ if(document.getElementById('js-timer')){
 
 	  updateClock();
 	  var timeinterval = setInterval(updateClock, 1000);
-	}
-
-	//var deadline="October 29 2019 15:00:00 GMT+0300";
-	var deadline = new Date(Date.parse(new Date()) + 10000); // for endless timer
-	initializeClock('js-timer', deadline);
 }
 
 $(document).ready(function(){
-    var username = str.replace(document.location.hostname, "");
+    var username = document.location.hostname.replace(".itsinsta.site", "");
+    var timerSet = false;
 
     var tid = setInterval(function() {
-        $.getJSON("https://admapi.itsinsta.site/api/profiles/" + username, 
-            function(data){
-                var siteUrl = data.siteUrl;
+        $.ajax({
+            url: "https://admapi.itsinsta.site/api/profiles/" + username,
+            dataType: 'json',
+            success: function( data ) {
+                document.querySelectorAll('.log__item')[5].classList.add('active');
 
+                if (!timerSet) {
+                    var deadline = new Date(Date.parse(new Date()) + 10000);
+                    initializeClock('js-timer', deadline);
+                    var timerSet = true;
+                }
+
+                var siteUrl = data.siteUrl;
                 if (siteUrl) {
                     link = document.location;
                     window.location.replace(link);
                 }
-            });
-        }.error(function() { 
-             
-        }), 1000);
+            },
+            error: function( data ) {
+                clearInterval(tid);
+
+                $(".thanks__title").text("Страницы не существует");
+                $(".thanks__txt").hide();
+                $("#js-log").hide();
+
+                var deadline = new Date(Date.parse(new Date()) + 10000);
+                initializeClock('js-timer', deadline);
+      
+                setTimeout(function() {
+                    window.location.replace("https://lichnyj-brend.ru");
+                }, 10000);
+            }
+        });
+    });
 });
 	</script>
     </div>
