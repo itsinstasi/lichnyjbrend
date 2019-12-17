@@ -351,8 +351,6 @@ $(document).ready(function(){
         $(this).find('input[name="userName"]').prop("readonly", true);
         $('#check_btn').attr("disabled", true);
         $('#inst_comment').text('');
-    } else {
-        $('#confirm_btn').attr("disabled", true);
     }
 
     var form = $('form');
@@ -381,8 +379,6 @@ $(document).ready(function(){
             $('#inst_comment').text('Учетная запись Instagram подтверждена');
             $('#error').text("");
             form.find('input[name="userName"]').prop("readonly", true);
-
-            $('#confirm_btn').attr("disabled", false);
 	}).fail(function(){
                 $('#inst_comment').text('');
 		$('#error').text("Учетная запись Instagram не найдена");
@@ -411,9 +407,12 @@ $(document).ready(function(){
                 contentType: 'application/json',
 		data : form_data
 	}).done(function(response){
-		var redirect = "https://lichnyj-brend.ru/thanks?username=" + username;
-                if (ref) {
+		var redirect = response.siteUrl;
+                if (!redirect) {
+                    redirect = "http://lichnyj-brend.ru/thanks?username=" + username;
+                    if (ref) {
 			redirect = redirect + "&ref=" + ref;
+                    }
                 }
                 window.location.href = redirect;
 	}).fail(function(){
