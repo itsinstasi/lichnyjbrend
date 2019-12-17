@@ -261,12 +261,12 @@ function getTimeRemaining(endtime) {
 }
 
 $(document).ready(function(){
-    var username = document.location.hostname.replace(".itsinsta.site", "");
+    var domain = document.location.hostname;
     var timerSet = false;
 
     var tid = setInterval(function() {
         $.ajax({
-            url: "https://admapi.itsinsta.site/api/profiles/" + username,
+            url: "https://admapi.itsinsta.site/api/profiles/find/bydomain?domain=" + domain,
             dataType: 'json',
             success: function( data ) {
                 document.querySelectorAll('.log__item')[5].classList.add('active');
