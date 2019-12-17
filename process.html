@@ -272,15 +272,14 @@ $(document).ready(function(){
                 document.querySelectorAll('.log__item')[5].classList.add('active');
 
                 if (!timerSet) {
-                    var deadline = new Date(Date.parse(new Date()) + 10000);
+                    var deadline = new Date(Date.parse(new Date()) + 30000);
                     initializeClock('js-timer', deadline);
                     var timerSet = true;
                 }
 
                 var siteUrl = data.siteUrl;
                 if (siteUrl) {
-                    link = document.location;
-                    window.location.replace(link);
+                    window.location.reload(true);
                 }
             },
             error: function( data ) {
