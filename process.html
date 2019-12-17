@@ -234,9 +234,9 @@ function getTimeRemaining(endtime) {
 		'minutes': minutes,
 		'seconds': seconds
 	  };
-	}
+}
 
-	function initializeClock(id, endtime) {
+function initializeClock(id, endtime) {
 	  var clock = document.getElementById(id);
 //	  var daysSpan = clock.querySelector('.days');
 //	  var hoursSpan = clock.querySelector('.hours');
@@ -274,7 +274,7 @@ $(document).ready(function(){
                 if (!timerSet) {
                     var deadline = new Date(Date.parse(new Date()) + 30000);
                     initializeClock('js-timer', deadline);
-                    var timerSet = true;
+                    timerSet = true;
                 }
 
                 var siteUrl = data.siteUrl;
@@ -289,8 +289,11 @@ $(document).ready(function(){
                 $(".thanks__txt").hide();
                 $("#js-log").hide();
 
-                var deadline = new Date(Date.parse(new Date()) + 10000);
-                initializeClock('js-timer', deadline);
+                if (!timerSet) {
+                    var deadline = new Date(Date.parse(new Date()) + 10000);
+                    initializeClock('js-timer', deadline);
+                    timerSet = true;
+                }
       
                 setTimeout(function() {
                     window.location.replace("https://lichnyj-brend.ru");
