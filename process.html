@@ -274,7 +274,7 @@ $(document).ready(function(){
                 document.querySelectorAll('.log__item')[5].classList.add('active');
 
                 if (!timerSet) {
-                    var deadline = new Date(Date.parse(new Date()) + 30000);
+                    var deadline = new Date(Date.parse(new Date()) + 90000);
                     initializeClock('js-timer', deadline);
                     timerSet = true;
                 }
