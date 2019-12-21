@@ -263,12 +263,14 @@ function initializeClock(id, endtime) {
 $(document).ready(function(){
     var domain = document.location.hostname;
     var timerSet = false;
+    var exists = false;
 
     var tid = setInterval(function() {
         $.ajax({
             url: "https://admapi.itsinsta.site/api/profiles/find/bydomain?domain=" + domain,
             dataType: 'json',
             success: function( data ) {
+                exists = true;
                 document.querySelectorAll('.log__item')[5].classList.add('active');
 
                 if (!timerSet) {
@@ -283,24 +285,26 @@ $(document).ready(function(){
                 }
             },
             error: function( data ) {
-                clearInterval(tid);
+                if (!exists) {
+                    clearInterval(tid);
 
-                $(".thanks__title").text("cтраницы не существует");
-                $(".thanks__txt").hide();
-                $("#js-log").hide();
+                    $(".thanks__title").text("cтраницы не существует");
+                    $(".thanks__txt").hide();
+                    $("#js-log").hide();
 
-                if (!timerSet) {
-                    var deadline = new Date(Date.parse(new Date()) + 10000);
-                    initializeClock('js-timer', deadline);
-                    timerSet = true;
-                }
+                    if (!timerSet) {
+                        var deadline = new Date(Date.parse(new Date()) + 10000);
+                        initializeClock('js-timer', deadline);
+                        timerSet = true;
+                    }
       
-                setTimeout(function() {
-                    window.location.replace("https://lichnyj-brend.ru");
-                }, 10000);
+                    setTimeout(function() {
+                        window.location.replace("https://lichnyj-brend.ru");
+                    }, 10000);
+                }
             }
         });
-    });
+    }, 1000);
 });
 	</script>
     </div>
