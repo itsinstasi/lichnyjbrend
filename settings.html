@@ -133,6 +133,7 @@
           <label class="settings__form-label">
             <span class="settings__form-title">E-mail для заявок *</span>
             <input class="input settings__form-input" type="email" name="email" placeholder="user_name@site.com" required>
+            <small id="errorEmail" class="settings__form-small error"></small>
             <small class="settings__form-small">Вы сможете получать заявки с вашего сайта на почту.</small>            
           </label>
           <!--<label class="settings__form-label">
@@ -398,9 +399,23 @@ $(document).ready(function(){
 	event.preventDefault(); //prevent default action 
 
 	var username = $(this).find('input[name="userName"]').val();
-	if (!username) return false;
+	if (!username) {
+            $('#error').text("Учетная запись Instagram не указана");
+
+            return false;
+        }
+
+	var username = ;
+	if (!$(this).find('input[name="email"]').val()) {
+            $('#errorEmail').text("E-mail не указан");
+
+            return false;
+        }
 
         $('#confirm_btn').prop('disabled', true);
+
+        $('#error').text("");
+        $('#errorEmail').text("");
 
 	var post_url = form.attr("action"); //get form action url
 	var request_method = form.attr("method"); //get form GET/POST method
