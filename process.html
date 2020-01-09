@@ -58,6 +58,7 @@
     <h1 class="thanks__title"><span>Идет</span><br> проверка сайта</h1>
     <div class="thanks__txt">
       <p>Пожалуйста, дождитесь окончания</p>
+      <a id="goadmin" target="_blank" style="display: none;" href="http://itsinsta.site/invite.html?invitationId={lid}" class="btn btn_red sec__footer-btn"><span>Настроить</span></a>
       <p><b>До окончания осталось:</b></p>
     </div>
     <div class="timer" id="js-timer">    	
@@ -260,10 +261,31 @@ function initializeClock(id, endtime) {
 	  var timeinterval = setInterval(updateClock, 1000);
 }
 
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+}
+
 $(document).ready(function(){
     var domain = document.location.hostname;
     var timerSet = false;
     var exists = false;
+    var lid = getUrlParameter("lid");
+    if (lid) {
+        $(".thanks__txt > p").first().text("Пока мы готовим ваш сайт, давайте настроим контактную информацию для связи");
+        $("#goadmin").attr("href", $("#goadmin").attr("href").replace("{lid}", lid));
+        $("#goadmin").show();
+    }
 
     var tid = setInterval(function() {
         $.ajax({
@@ -274,7 +296,7 @@ $(document).ready(function(){
                 document.querySelectorAll('.log__item')[5].classList.add('active');
 
                 if (!timerSet) {
-                    var deadline = new Date(Date.parse(new Date()) + 120000);
+                    var deadline = new Date(Date.parse(new Date()) + 180000);
                     initializeClock('js-timer', deadline);
                     timerSet = true;
                 }
@@ -304,7 +326,7 @@ $(document).ready(function(){
                 }
             }
         });
-    }, 1000);
+    }, 10000);
 });
 	</script>
     </div>
