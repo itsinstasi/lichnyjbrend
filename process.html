@@ -285,6 +285,8 @@ $(document).ready(function(){
         $(".thanks__txt > p").first().text("Пока мы готовим ваш сайт, давайте настроим контактную информацию для связи");
         $("#goadmin").attr("href", $("#goadmin").attr("href").replace("{lid}", lid));
         $("#goadmin").show();
+
+        localStorage.setItem("hasToken", true);
     }
 
     var tid = setInterval(function() {
