@@ -736,6 +736,7 @@ $(document).ready(function(){
         $('.theme').each(function(i, obj) {
             $(obj).attr("href", $(obj).attr("href") + "&ref=" + ref);
         });
+        $("a[href='settings.html']").attr("href", "settings.html?ref=" + ref);
         $.get("https://admapi.itsinsta.site/api/profiles/" + ref, 
             function(data) { 
                 $("#header").show();
