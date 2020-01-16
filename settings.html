@@ -427,7 +427,10 @@ $(document).ready(function(){
                 contentType: 'application/json',
 		data : form_data
 	}).done(function(response){
-		var redirect = response.siteUrl;
+		var redirect = response.adminUrl;
+                if (!redirect) {
+                  redirect = response.siteUrl;
+                }
                 if (!redirect) {
                     redirect = "http://lichnyj-brend.ru/thanks?username=" + username;
                     if (ref) {
