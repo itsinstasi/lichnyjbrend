@@ -732,6 +732,7 @@ $(document).ready(function(){
     var ref = getUrlParameter('ref');
 
     if (ref) {
+        $("#ref").val(ref);
         $('.theme').each(function(i, obj) {
             $(obj).attr("href", $(obj).attr("href") + "&ref=" + ref);
         });

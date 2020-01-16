@@ -372,7 +372,7 @@ $(document).ready(function(){
 
 	var post_url = form.attr("action"); //get form action url
 	var request_method = form.attr("method"); //get form GET/POST method
-	var form_data = JSON.stringify({ userName: username, theme: theme });
+	var form_data = JSON.stringify({ userName: username, theme: theme, ref: ref });
 
         $('#inst_comment').text('Проверяем...');
 	$('#error').text("");
