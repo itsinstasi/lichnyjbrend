@@ -298,14 +298,14 @@ $(document).ready(function(){
                 document.querySelectorAll('.log__item')[5].classList.add('active');
 
                 if (!timerSet) {
-                    var deadline = new Date(Date.parse(new Date()) + 600000);
+                    var deadline = new Date(Date.parse(new Date()) + 60000);
                     initializeClock('js-timer', deadline);
                     timerSet = true;
                 }
 
                 var siteUrl = data.siteUrl;
                 if (siteUrl) {
-                    window.location.href = window.location.href;
+                    location.reload(true);
                 }
             },
             error: function( data ) {
@@ -328,7 +328,7 @@ $(document).ready(function(){
                 }
             }
         });
-    }, 1000);
+    }, 10000);
 });
 	</script>
     </div>
