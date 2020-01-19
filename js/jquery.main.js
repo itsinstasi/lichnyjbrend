@@ -1,7 +1,6 @@
 //var supportsTouch = ('ontouchstart' in document.documentElement);
 //console.log(supportsTouch);
 
-var canShowPopup = $('#js-stories-popup').length && popupSettings;
 $(document).ready(function(){
 	//grid
 	$('#js-grid').on('click', function(){
@@ -19,14 +18,7 @@ $(document).ready(function(){
 	});
 	
 	//stories popup
-	$('.js-stories-popup-open').on('click', showPopup);
-
-        function showPopup() {
-                if (!canShowPopup) {
-                    return;
-                }
-                canShowPopup = false;
-
+	$('.js-stories-popup-open').on('click', function(){
 		$('#js-stories-popup').fadeIn(250);
 		
 		//скрипт создания разметки попапа
@@ -69,39 +61,11 @@ $(document).ready(function(){
 				playPauseAutoplayFn();			
 			}
 		});
-	}	
+	});	
 	$('.js-stories-popup-close').on('click', function(){
 		$('#js-stories-popup').fadeOut(250);
 		$('#js-stories-popap-slider').slick('unslick');
-                canShowPopup = true;
 	});
-
-        if (canShowPopup) {
-                var popupTimeoutName = localStorage.getItem("popupSettingsName");
-                var popupTimeout = localStorage.getItem("popupTimeout");
-
-                if (!popupTimeout || popupTimeoutName != popupSettings.name) {
-                    popupTimeout = 0;
-                    localStorage.setItem("popupSettingsName", popupSettings.name);
-                }
-
-                var popupIntervalId = setInterval(function() {
-                    if (!canShowPopup) {
-                        return;
-                    }
-
-                    popupTimeout++;
-                    localStorage.setItem("popupTimeout", popupTimeout);
-
-                    if(jQuery.inArray(popupTimeout, popupSettings.timeouts) !== -1) {
-                         showPopup();
-                    }
-
-                    if (Math.max.apply(Math, popupSettings.timeouts) < popupTimeout) {  
-                        clearInterval(popupIntervalId);
-                    }
-                }, 1000);
-        }
 	
 	//tags bar fix
 	if($(window).width() >= 768){
