@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Refresh" content="7; url=//lichnyj-brend.ru/" />
+  </head>
+  <body>
+    <p>Please follow <a href="//lichnyj-brend.ru/">this link</a>.</p>
+
+    <script type="text/javascript">
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+
+var link = "https://lichnyj-brend.ru";
+var ref = getUrlParameter('ref');
+if (ref) {
+    link = link + "?ref=" + ref;
+}
+
+window.location.replace(link);
+    </script>
+  </body>
+</html>
