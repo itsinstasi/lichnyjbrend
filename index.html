@@ -790,6 +790,9 @@ $(document).ready(function(){
 			redirect = redirect + "&ref=" + ref;
                     }
                 }
+
+                ym(56430199, 'reachGoal', 'instagram');
+
                 window.location.href = redirect;
 	}).fail(function(){
 		$('#error').text("Учетная запись Instagram не найдена");
