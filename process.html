@@ -58,7 +58,7 @@
     <h1 class="thanks__title"><span>Идет</span><br> проверка сайта</h1>
     <div class="thanks__txt">
       <p>Пожалуйста, дождитесь окончания</p>
-      <a id="goadmin" target="_blank" style="display: none;" href="http://itsinsta.site/invite.html?invitationId={lid}" class="btn shake btn_red sec__footer-btn"><span>Настроить</span></a>
+      <a id="goadmin" target="_blank" style="display: none;" href="http://itsinsta.site/page.html" class="btn shake btn_red sec__footer-btn"><span>Настроить</span></a>
       <p><b>До окончания осталось:</b></p>
     </div>
     <div class="timer" id="js-timer">    	
@@ -283,7 +283,6 @@ $(document).ready(function(){
     var lid = getUrlParameter("lid");
     if (lid) {
         $(".thanks__txt > p").first().text("Пока мы готовим ваш сайт, давайте настроим контактную информацию для связи");
-        $("#goadmin").attr("href", $("#goadmin").attr("href").replace("{lid}", lid));
         $("#goadmin").show();
 
         localStorage.setItem("hasToken", true);
