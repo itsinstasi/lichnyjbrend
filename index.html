@@ -738,7 +738,7 @@ $(document).ready(function(){
         $('.theme').each(function(i, obj) {
             $(obj).attr("href", $(obj).attr("href") + "&ref=" + ref);
         });
-        $("a[href='settings.html']").attr("href", "settings.html?ref=" + ref);
+        $("a[href='settings.html']").attr("href", "https://sweety.link?ref=" + ref);
         $.get("https://admapi.itsinsta.site/api/profiles/" + ref, 
             function(data) { 
                 $("#header").show();
@@ -771,11 +771,13 @@ $(document).ready(function(){
                 contentType: 'application/json',
 		data : form_data
 	}).done(function(response){
-		var redirect = "https://lichnyj-brend.ru/settings?username=" + username;
+                window.location.href = response.adminUrl;
+
+		/*var redirect = "https://lichnyj-brend.ru/settings?username=" + username;
                 if (ref) {
 			redirect = redirect + "&ref=" + ref;
                 }
-                window.location.href = redirect;
+                window.location.href = redirect;*/
 	}).fail(function(){
 		$('#error').text("Учетная запись Instagram не найдена");
                 $('#inst_comment').text('');
